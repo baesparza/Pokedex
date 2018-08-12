@@ -18,35 +18,37 @@ class Default extends StatelessWidget {
       child: Scaffold(
         key: _scaffoldKey,
         backgroundColor: Colors.white,
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0.0,
-          leading: new IconButton(
-              icon: new Icon(
-                Icons.blur_circular,
-                color: Theme.of(context).primaryColor,
-              ),
-              onPressed: () => _scaffoldKey.currentState.openDrawer()),
-          title: Text(
-            'POKEDEX',
-            style: TextStyle(
-              color: Constants.colorBlack,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          actions: <Widget>[
-            _buildIconButton(Icons.search, () {}),
-            _buildIconButton(Icons.settings, () {}),
-          ],
-        ),
+        appBar: _buildNavbar(),
         drawer: Sidebar(),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: Theme.of(context).primaryColor,
-          child: Icon(Icons.arrow_upward),
-          onPressed: () {},
-        ),
+        // floatingActionButton: FloatingActionButton(
+        //   backgroundColor: Theme.of(context).primaryColor,
+        //   child: Icon(Icons.arrow_upward),
+        //   onPressed: () {},
+        // ),
         body: child,
       ),
+    );
+  }
+
+  AppBar _buildNavbar() {
+    return AppBar(
+      iconTheme: IconThemeData(color: Constants.colorBlack),
+      backgroundColor: Constants.colorWhite,
+      leading: MaterialButton(
+          child: Image.asset('assets/img/logo.png'),
+          onPressed: () => _scaffoldKey.currentState.openDrawer()),
+      title: Text(
+        'Pokedex',
+        style: TextStyle(
+          color: Constants.colorBlack,
+          fontWeight: FontWeight.w500,
+          fontSize: 23.0,
+        ),
+      ),
+      actions: <Widget>[
+        _buildIconButton(Icons.search, () {}),
+        _buildIconButton(Icons.settings, () {}),
+      ],
     );
   }
 
@@ -55,7 +57,6 @@ class Default extends StatelessWidget {
       onPressed: fn,
       icon: Icon(
         icon,
-        color: Constants.colorBlack,
       ),
     );
   }

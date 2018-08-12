@@ -14,7 +14,7 @@ class Application {
       brightness: Brightness.light,
       primaryColor: Constants.colorBlue,
       primarySwatch: Constants.colorRed,
-      fontFamily: 'Raleway',
+      fontFamily: 'Roboto',
     );
   }
 }
