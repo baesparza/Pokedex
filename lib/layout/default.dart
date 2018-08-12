@@ -5,6 +5,7 @@ import 'package:pokedex/widgets/ui/sidebar.dart';
 
 class Default extends StatelessWidget {
   final Widget child;
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   Default({
     Key key,
@@ -15,10 +16,17 @@ class Default extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
+        key: _scaffoldKey,
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0.0,
+          leading: new IconButton(
+              icon: new Icon(
+                Icons.blur_circular,
+                color: Theme.of(context).primaryColor,
+              ),
+              onPressed: () => _scaffoldKey.currentState.openDrawer()),
           title: Text(
             'POKEDEX',
             style: TextStyle(
@@ -28,9 +36,15 @@ class Default extends StatelessWidget {
           ),
           actions: <Widget>[
             _buildIconButton(Icons.search, () {}),
+            _buildIconButton(Icons.settings, () {}),
           ],
         ),
-        drawer: new Sidebar(),
+        drawer: Sidebar(),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Theme.of(context).primaryColor,
+          child: Icon(Icons.arrow_upward),
+          onPressed: () {},
+        ),
         body: child,
       ),
     );
@@ -46,5 +60,3 @@ class Default extends StatelessWidget {
     );
   }
 }
-
-

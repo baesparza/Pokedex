@@ -8,16 +8,25 @@ class Sidebar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: new Column(
+      
+      child: ListView(
         children: <Widget>[
-          AppBar(
-            title: new Text("Menu"),
-            automaticallyImplyLeading: false,
+          DrawerHeader(
+            child: Text('Drawer Header'),
+            decoration: BoxDecoration(
+              color: Theme.of(context).primaryColor,
+            ),
           ),
           ListTile(
             title: new Text("Home"),
             onTap: () {
               Navigator.pushReplacementNamed(context, '/');
+            },
+          ),
+          ListTile(
+            title: Text('Item 2'),
+            onTap: () {
+              Navigator.pop(context);
             },
           ),
         ],
