@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:pokedex/config/constants.dart';
-import 'package:pokedex/pages/home/main.dart';
 
 class Application {
   /// Develop/Debug
   static bool enablePerformanceOverlay = false;
   static bool checkerboardRasterCacheImages = false;
+  static bool debugShowCheckedModeBanner = false;
 
   // App theme
   static ThemeData appTheme() {

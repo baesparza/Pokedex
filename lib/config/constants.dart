@@ -4,4 +4,5 @@ class Constants {
   /// Colors
   static const Color colorRed = Colors.red;
   static const Color colorBlue = Colors.blue;
+  static const Color colorBlack = Colors.black;
 }

@@ -11,7 +11,7 @@ class Router {
 
   static Route appOnUnknownRoute(RouteSettings settings) {
     return MaterialPageRoute(builder: (BuildContext context) {
-      Home();
+      return Home();
     });
   }
 }
