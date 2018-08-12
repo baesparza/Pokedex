@@ -12,7 +12,12 @@ class Default extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pokedex'),
+        title: Text(
+          'POKEDEX',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       body: child,
     );
