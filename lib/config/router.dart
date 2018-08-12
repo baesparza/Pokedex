@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+
+import 'package:pokedex/pages/home/main.dart';
+
+class Router {
+  static Map<String, WidgetBuilder> appRoutes() {
+    return {
+      '/': (BuildContext context) => Home(),
+    };
+  }
+
+  static Route appOnUnknownRoute(RouteSettings settings) {
+    return MaterialPageRoute(builder: (BuildContext context) {
+      Home();
+    });
+  }
+}

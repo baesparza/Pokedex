@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:pokedex/config/application.dart';
-import 'package:pokedex/pages/home/main.dart';
+import 'package:pokedex/config/router.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +12,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Pokedex',
       theme: Application.appTheme(),
-      home: Home(),
+      debugShowCheckedModeBanner: false,
+      routes: Router.appRoutes(),
+      onGenerateRoute: (RouteSettings settings) {
+        return null;
+      },
+      onUnknownRoute: Router.appOnUnknownRoute,
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:pokedex/config/constants.dart';
+import 'package:pokedex/pages/home/main.dart';
 
 class Application {
   /// Develop/Debug
