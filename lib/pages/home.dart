@@ -1,12 +1,11 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 import 'package:pokedex/layout/default.dart';
 import 'package:pokedex/config/constants.dart';
+import 'package:pokedex/db/pokemons.dart';
 
 class Home extends StatefulWidget {
-  final List<dynamic> pokemons = [];
+  final List<dynamic> pokemons = DB.Pokemons;
   @override
   HomeState createState() {
     return HomeState();
@@ -17,16 +16,11 @@ class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     // calc row using query
-    int count =
-        (MediaQuery.of(context).orientation == Orientation.landscape) ? 5 : 3;
+    int count = (MediaQuery.of(context).orientation == Orientation.landscape) ? 5 : 3;
     // draw widget
     return Default(
       child: Column(
         children: <Widget>[
-          FlatButton(
-            child: Text('Load Pokemons'),
-            onPressed: fetchPokemons,
-          ),
           Expanded(
             child: GridView.builder(
               itemBuilder: _buildGridPokemons,
@@ -65,8 +59,8 @@ class HomeState extends State<Home> {
           child: Column(
             children: <Widget>[
               Expanded(
-                child: Image.network(
-                    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${n}.png'),
+                child:
+                    Image.network('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${n}.png'),
               ),
               Text(
                 name,
@@ -84,18 +78,5 @@ class HomeState extends State<Home> {
         ),
       ),
     );
-  }
-
-  void fetchPokemons() {
-    http.get('http://pokeapi.co/api/v2/pokemon/', headers: {
-      'limit': '30',
-      'offset': '20'
-    }).then((http.Response response) {
-      setState(() {
-        Map<String, dynamic> res;
-        res = json.decode(response.body);
-        widget.pokemons.addAll(res['results']);
-      });
-    });
   }
 }

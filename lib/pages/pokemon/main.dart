@@ -6,32 +6,35 @@ import 'package:pokedex/layout/default.dart';
 import 'package:pokedex/config/constants.dart';
 
 class Pokemon extends StatefulWidget {
-  final String id;
+  String id;
   Map<dynamic, dynamic> res;
 
-  Pokemon(this.id);
+  Pokemon({this.id = '0'});
 
   @override
   PokemonState createState() {
-    return new PokemonState();
+    return PokemonState();
   }
 }
 
 class PokemonState extends State<Pokemon> {
   // TODO: return wid after response, an manage invalid states
-  PokemonState() {
-    // fetch data
-    http
-        .get('http://pokeapi.co/api/v2/pokemon/${widget.id}/')
-        .then((http.Response response) {
-      setState(() {
-        widget.res = json.decode(response.body);
-      });
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
+    // fetch data
+    try {
+      http
+          .get('http://pokeapi.co/api/v2/pokemon/${widget.id}/')
+          .then((http.Response response) {
+        setState(() {
+          widget.res = json.decode(response.body);
+        });
+      });
+    } catch (e) {
+      print('An error ocourred fetching pokemon, id: ${widget.id}');
+    }
+
     // render widject if data already loaded, otherwise render loading text
     return Default(
       child: (widget.res == null)
@@ -90,7 +93,10 @@ class Info extends StatelessWidget {
       String typeName = type['type']['name'];
 
       Widget text = Container(
-        decoration: BoxDecoration(color: Constants.getTypeColor(typeName)),
+        decoration: BoxDecoration(
+          color: Constants.getTypeColor(typeName),
+          borderRadius: new BorderRadius.circular(25.0),
+        ),
         padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
         margin: EdgeInsets.only(right: 10.0, top: 10.0),
         child: Text(

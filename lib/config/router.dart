@@ -17,7 +17,9 @@ class Router {
 
     if (path[1] == 'pokemon')
       return MaterialPageRoute(builder: (BuildContext context) {
-        return Pokemon(path[2]);
+        return Pokemon(
+          id: path[2],
+        );
       });
     return null;
   }
