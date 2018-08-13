@@ -16,9 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Pokedex',
       theme: Application.appTheme(),
       routes: Router.appRoutes(),
-      onGenerateRoute: (RouteSettings settings) {
-        return null;
-      },
+      onGenerateRoute: Router.onGenerateRoute,
       onUnknownRoute: Router.appOnUnknownRoute,
     );
   }

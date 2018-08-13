@@ -52,7 +52,7 @@ class HomeState extends State<Home> {
     // draw card
     return GestureDetector(
       onTap: () {
-        print('Taped');
+        Navigator.pushNamed(context, '/pokemon/$n');
       },
       onLongPress: () {
         print('LongPressed');
