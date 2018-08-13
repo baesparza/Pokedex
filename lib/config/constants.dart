@@ -27,6 +27,29 @@ class Constants {
   static const Color colorDragon = Color(0xff6f37f9);
   static const Color colorDark = Color(0xff6f5747);
   static const Color colorFairy = Color(0xffe87890);
-  // static const Color colorUnknown = Color(0xff);
+  static const Color colorUnknown = Color(0xff);
   // static const Color colorShadow = Color(0xff);
+
+  /// Get type color based on type argument
+  static Color getTypeColor(String type) {
+    if (type == 'normal') return Constants.colorNormal;
+    if (type == 'fighting') return Constants.colorFighting;
+    if (type == 'flying') return Constants.colorFlying;
+    if (type == 'poison') return Constants.colorPoison;
+    if (type == 'ground') return Constants.colorGround;
+    if (type == 'rock') return Constants.colorRock;
+    if (type == 'bug') return Constants.colorBug;
+    if (type == 'ghost') return Constants.colorGhost;
+    if (type == 'steel') return Constants.colorSteel;
+    if (type == 'fire') return Constants.colorFire;
+    if (type == 'water') return Constants.colorWater;
+    if (type == 'grass') return Constants.colorGrass;
+    if (type == 'electric') return Constants.colorElectric;
+    if (type == 'psychic') return Constants.colorPsychic;
+    if (type == 'ice') return Constants.colorIce;
+    if (type == 'dragon') return Constants.colorDragon;
+    if (type == 'dark') return Constants.colorDark;
+    if (type == 'fairy') return Constants.colorFairy;
+    return Constants.colorUnknown;
+  }
 }
