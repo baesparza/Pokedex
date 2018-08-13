@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/pages/home/main.dart';
+import 'package:pokedex/pages/home.dart';
 
 class Router {
   static Map<String, WidgetBuilder> appRoutes() {

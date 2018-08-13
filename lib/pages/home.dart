@@ -16,6 +16,9 @@ class Home extends StatefulWidget {
 class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    // calc row using query
+    int count =
+        (MediaQuery.of(context).orientation == Orientation.landscape) ? 5 : 3;
     // draw widget
     return Default(
       child: Column(
@@ -28,10 +31,10 @@ class HomeState extends State<Home> {
             child: GridView.builder(
               itemBuilder: _buildGridPokemons,
               itemCount: widget.pokemons.length,
-              primary: false,
-              padding: const EdgeInsets.all(20.0),
+              primary: true,
+              padding: EdgeInsets.only(left: 5.0, right: 5.0, bottom: 10.0),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
+                crossAxisCount: count,
               ),
             ),
           ),
@@ -41,6 +44,12 @@ class HomeState extends State<Home> {
   }
 
   Widget _buildGridPokemons(BuildContext context, int index) {
+    // logic
+    String n = '${index+1}';
+    String id = '#' + '0' * (3 - n.length) + n;
+    String tempName = widget.pokemons[index]['name'];
+    String name = tempName[0].toUpperCase() + tempName.substring(1);
+    // draw card
     return GestureDetector(
       onTap: () {
         print('Taped');
@@ -49,7 +58,7 @@ class HomeState extends State<Home> {
         print('LongPressed');
       },
       child: Card(
-        color: Constants.colorRed,
+        color: Constants.colorGrey,
         elevation: 2.0,
         child: Container(
           padding: const EdgeInsets.all(2.0),
@@ -57,14 +66,14 @@ class HomeState extends State<Home> {
             children: <Widget>[
               Expanded(
                 child: Image.network(
-                    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png'),
+                    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${n}.png'),
               ),
               Text(
-                '${widget.pokemons[index]['name']}'.toUpperCase(),
+                name,
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
               Text(
-                '#${index+1}',
+                id,
                 style: TextStyle(
                   fontSize: 13.0,
                   fontWeight: FontWeight.w300,
