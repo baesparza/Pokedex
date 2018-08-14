@@ -1,15 +1,11 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
-import 'package:pokedex/layout/default.dart';
+import 'package:pokedex/layout/detail.dart';
 import 'package:pokedex/config/constants.dart';
+import 'package:pokedex/db/pokemon.dart';
 
 class Pokemon extends StatefulWidget {
-  String id;
-  Map<dynamic, dynamic> res;
-
-  Pokemon({this.id = '0'});
+  final Map<dynamic, dynamic> res = DB.pokemon;
 
   @override
   PokemonState createState() {
@@ -22,26 +18,14 @@ class PokemonState extends State<Pokemon> {
 
   @override
   Widget build(BuildContext context) {
-    // fetch data
-    try {
-      http
-          .get('http://pokeapi.co/api/v2/pokemon/${widget.id}/')
-          .then((http.Response response) {
-        setState(() {
-          widget.res = json.decode(response.body);
-        });
-      });
-    } catch (e) {
-      print('An error ocourred fetching pokemon, id: ${widget.id}');
-    }
-
     // render widject if data already loaded, otherwise render loading text
-    return Default(
+    return Detail(
+      primaryColor: Constants.getTypeColor('fire'),
       child: (widget.res == null)
           ? Center(
               child: Text('Loading...'),
             )
-          : new Info(
+          : Info(
               res: widget.res,
             ),
     );
@@ -65,28 +49,16 @@ class Info extends StatelessWidget {
     String name = tempName[0].toUpperCase() + tempName.substring(1);
     // render
     return ListView(
+      padding: EdgeInsets.all(10.0),
       children: <Widget>[
-        Row(
-          children: <Widget>[
-            Image.network(res['sprites']['front_default']),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(number),
-                Text(name),
-                Row(
-                  children: _buildTypes(res['types']),
-                )
-              ],
-            )
-          ],
-        )
+        InfoHeader(res: res, number: number, name: name),
+        Text(),
       ],
     );
   }
 
   /// Return list of widgets depending on number of types
-  List<Widget> _buildTypes(List<dynamic> types) {
+  static List<Widget> _buildTypes(List<dynamic> types) {
     List<Widget> widgets = [];
     // get types
     for (Map<dynamic, dynamic> type in types) {
@@ -95,10 +67,10 @@ class Info extends StatelessWidget {
       Widget text = Container(
         decoration: BoxDecoration(
           color: Constants.getTypeColor(typeName),
-          borderRadius: new BorderRadius.circular(25.0),
+          borderRadius: BorderRadius.circular(10.0),
         ),
         padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-        margin: EdgeInsets.only(right: 10.0, top: 10.0),
+        margin: EdgeInsets.only(right: 10.0, top: 2.0),
         child: Text(
           typeName.toUpperCase(),
           style: TextStyle(
@@ -111,5 +83,43 @@ class Info extends StatelessWidget {
     }
     // return widgets
     return widgets;
+  }
+}
+
+class InfoHeader extends StatelessWidget {
+  const InfoHeader({
+    Key key,
+    @required this.res,
+    @required this.number,
+    @required this.name,
+  }) : super(key: key);
+
+  final Map res;
+  final String number;
+  final String name;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Image.network(res['sprites']['front_default']),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(number),
+            Text(
+              name,
+              style: TextStyle(
+                fontSize: 23.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Row(
+              children: Info._buildTypes(res['types']),
+            )
+          ],
+        )
+      ],
+    );
   }
 }

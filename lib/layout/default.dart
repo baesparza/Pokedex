@@ -34,6 +34,7 @@ class Default extends StatelessWidget {
     return AppBar(
       iconTheme: IconThemeData(color: Constants.colorBlack),
       backgroundColor: Constants.colorWhite,
+      titleSpacing: 0.0,
       leading: MaterialButton(
           child: Image.asset('assets/img/logo.png'),
           onPressed: () => _scaffoldKey.currentState.openDrawer()),
