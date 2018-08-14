@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 class Detail extends StatelessWidget {
   final Widget child;
 
-  final Color primaryColor, secondaryColor;
+  final Color primaryColor;
+  final String title;
 
   Detail({
     Key key,
     @required this.child,
     @required this.primaryColor,
-    this.secondaryColor,
+    @required this.title,
   }) : super(key: key);
 
   @override
@@ -18,9 +19,12 @@ class Detail extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: primaryColor,
         elevation: 0.0,
-        title: Text('Pokemon Details'),
+        title: Text(title),
       ),
-      body: child,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
+        child: child,
+      ),
     );
   }
 }

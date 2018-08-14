@@ -5,7 +5,7 @@ import 'package:pokedex/config/constants.dart';
 import 'package:pokedex/db/pokemons.dart';
 
 class Home extends StatefulWidget {
-  final List<dynamic> pokemons = DB.Pokemons;
+  final List<Map<String, dynamic>> pokemons = DB.Pokemons;
   @override
   HomeState createState() {
     return HomeState();
@@ -41,12 +41,10 @@ class HomeState extends State<Home> {
     // logic
     String n = '${index+1}';
     String id = '#' + '0' * (3 - n.length) + n;
-    String tempName = widget.pokemons[index]['name'];
-    String name = tempName[0].toUpperCase() + tempName.substring(1);
     // draw card
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '/pokemon/$n');
+        Navigator.pushNamed(context, '/pokemon/$index');
       },
       onLongPress: () {
         print('LongPressed');
@@ -63,7 +61,7 @@ class HomeState extends State<Home> {
                     Image.network('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${n}.png'),
               ),
               Text(
-                name,
+                widget.pokemons[index]['name'],
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
               Text(
