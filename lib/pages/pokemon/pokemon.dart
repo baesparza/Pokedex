@@ -28,6 +28,22 @@ class Pokemon extends StatelessWidget {
             Pokemon._buildSubTitles('Statistics'),
           ],
         ),
+        Pokemon._buildSections(
+          children: <Widget>[
+            Pokemon._buildSubTitles('Weaknesses'),
+            Row(
+              children: Pokemon._buildTypes(res['weaknesses']),
+            ),
+          ],
+        ),
+        Pokemon._buildSections(
+          children: <Widget>[
+            Pokemon._buildSubTitles('Strengths'),
+            Row(
+              children: Pokemon._buildTypes(res['strengths']),
+            ),
+          ],
+        ),
       ],
     );
   }
