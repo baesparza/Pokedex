@@ -13,24 +13,22 @@ class Pokemon extends StatelessWidget {
     return Detail(
       primaryColor: Color(int.parse('0xff' + res['colorHex'].substring(1))),
       title: res['name'] + ' Details',
-      child: ListView(
-        children: <Widget>[
-          Text(res.toString()),
-          InfoHeader(
-            number: res['number'].toString(),
-            name: res['name'],
-            types: res['types'],
-          ),
-          InfoDescription(
-            description: res['description'],
-          ),
-          Pokemon._buildSections(
-            children: <Widget>[
-              Pokemon._buildSubTitles('Statistics'),
-            ],
-          ),
-        ],
-      ),
+      children: <Widget>[
+        Text(res.toString()),
+        InfoHeader(
+          number: res['number'].toString(),
+          name: res['name'],
+          types: res['types'],
+        ),
+        InfoDescription(
+          description: res['description'],
+        ),
+        Pokemon._buildSections(
+          children: <Widget>[
+            Pokemon._buildSubTitles('Statistics'),
+          ],
+        ),
+      ],
     );
   }
 
