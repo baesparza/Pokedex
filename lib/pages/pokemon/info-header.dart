@@ -17,7 +17,8 @@ class InfoHeader extends StatelessWidget {
       children: <Widget>[
         Container(
           margin: const EdgeInsets.all(10.0),
-          child: Image.network('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$number.png'),
+          child: Image.network(
+              'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F$number.png?alt=media'),
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,

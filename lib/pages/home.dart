@@ -51,8 +51,8 @@ class HomeState extends State<Home> {
           child: Column(
             children: <Widget>[
               Expanded(
-                child:
-                    Image.network('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${n}.png'),
+                child: Image.network(
+                    'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F$n.png?alt=media'),
               ),
               Text(
                 widget.pokemons[index]['name'],
