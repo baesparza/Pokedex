@@ -25,8 +25,8 @@ class HomeState extends State<Home> {
             child: GridView.builder(
               itemBuilder: _buildGridPokemons,
               itemCount: widget.pokemons.length,
-              primary: true,
-              padding: EdgeInsets.only(left: 5.0, right: 5.0, bottom: 10.0),
+              primary: false,
+              padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: count,
               ),

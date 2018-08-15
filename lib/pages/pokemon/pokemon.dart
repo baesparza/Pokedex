@@ -114,30 +114,35 @@ class InfoMeta extends StatelessWidget {
       children: <Widget>[
         _buildCard(
           text: '#$rankingCP',
-          icon: Icons.star,
+          path: 'assets/img/ranking.png',
         ),
         _buildCard(
           text: rarity,
-          icon: Icons.ac_unit,
+          path: 'assets/img/pokeball.png',
         ),
         _buildCard(
           text: (egg == null) ? '-' : '$egg km',
-          icon: Icons.ac_unit,
+          path: 'assets/img/${(egg == null) ? 'no_egg' : 'egg'}.png',
         ),
       ],
     );
   }
 
-  Expanded _buildCard({@required String text, @required IconData icon}) {
+  Expanded _buildCard({@required String text, @required String path}) {
     return Expanded(
       child: Card(
         color: Constants.colorGrey,
         child: Container(
-          padding: EdgeInsets.all(10.0),
+          padding: EdgeInsets.symmetric(vertical: 16.0),
           child: Column(
             children: <Widget>[
-              Icon(icon),
-              Text((text == null) ? '-' : text),
+              Image.asset(path),
+              Text(
+                (text == null) ? '-' : text,
+                style: TextStyle(
+                  fontSize: 18.0,
+                ),
+              ),
             ],
           ),
         ),
@@ -320,7 +325,10 @@ class InfoHeader extends StatelessWidget {
     ////
     return Row(
       children: <Widget>[
-        Image.network('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$number.png'),
+        Padding(
+          padding: const EdgeInsets.only(right: 16.0),
+          child: Image.network('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/$number.png'),
+        ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[

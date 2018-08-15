@@ -20,11 +20,6 @@ class Default extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: _buildNavbar(),
         drawer: Sidebar(),
-        // floatingActionButton: FloatingActionButton(
-        //   backgroundColor: Theme.of(context).primaryColor,
-        //   child: Icon(Icons.arrow_upward),
-        //   onPressed: () {},
-        // ),
         body: child,
       ),
     );
@@ -36,8 +31,9 @@ class Default extends StatelessWidget {
       backgroundColor: Constants.colorWhite,
       titleSpacing: 0.0,
       leading: MaterialButton(
-          child: Image.asset('assets/img/logo.png'),
-          onPressed: () => _scaffoldKey.currentState.openDrawer()),
+        child: Image.asset('assets/img/logo.png'),
+        onPressed: () => _scaffoldKey.currentState.openDrawer(),
+      ),
       title: Text(
         'Pokedex',
         style: TextStyle(
@@ -47,18 +43,18 @@ class Default extends StatelessWidget {
         ),
       ),
       actions: <Widget>[
-        _buildIconButton(Icons.search, () {}),
-        _buildIconButton(Icons.settings, () {}),
+        _buildIconButton('assets/img/ranking.png', () {}),
+        _buildIconButton('assets/img/egg.png', () {}),
+        _buildIconButton('assets/img/search.png', () {}),
       ],
     );
   }
 
-  IconButton _buildIconButton(IconData icon, Function fn) {
-    return IconButton(
-      onPressed: fn,
-      icon: Icon(
-        icon,
-      ),
+  Widget _buildIconButton(String path, Function fn) {
+    return MaterialButton(
+      minWidth: 10.0,
+      child: Image.asset(path),
+      onPressed: () => _scaffoldKey.currentState.openDrawer(),
     );
   }
 }
