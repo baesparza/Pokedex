@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class Detail extends StatelessWidget {
   final Widget child;
   final Color primaryColor;
+  final String title;
 
   Detail({
     Key key,
     @required this.child,
     @required this.primaryColor,
+    @required this.title,
   }) : super(key: key);
 
   @override
@@ -15,8 +17,7 @@ class Detail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: primaryColor,
-        title: Text('Details'),
-        centerTitle: true,
+        title: Text(title),
       ),
       body: child,
     );
