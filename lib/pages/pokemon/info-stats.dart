@@ -41,7 +41,6 @@ class InfoStats extends StatelessWidget {
   }) {
     // calc percentage
     double per = value / full;
-    print(per);
     return Padding(
       padding: const EdgeInsets.symmetric(
         vertical: 5.0,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Section extends StatelessWidget {
-  Section({
+   Section({
     Key key,
     @required this.children,
     @required this.title,

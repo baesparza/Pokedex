@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex/widgets/poke-types.dart';
 
-class InfoHeader extends StatelessWidget {
-  const InfoHeader({
+class Header extends StatelessWidget {
+  const Header({
     Key key,
     @required this.number,
     @required this.name,

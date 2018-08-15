@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:pokedex/layout/detail.dart';
 import 'package:pokedex/pages/pokemon/info-stats.dart';
 import 'package:pokedex/pages/pokemon/meta.dart';
-import 'package:pokedex/pages/pokemon/info-header.dart';
+import 'package:pokedex/pages/pokemon/header.dart';
 import 'package:pokedex/widgets/poke-types.dart';
 import 'package:pokedex/widgets/section.dart';
 
@@ -19,7 +19,7 @@ class Pokemon extends StatelessWidget {
       primaryColor: color,
       child: Column(
         children: <Widget>[
-          InfoHeader(
+          Header(
             number: res['number'].toString(),
             name: res['name'],
             types: res['types'],
@@ -28,6 +28,7 @@ class Pokemon extends StatelessWidget {
             child: ListView(
               padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
               children: <Widget>[
+                /// Meta data cads
                 InfoMeta(
                   egg: res['egg'],
                   rankingCP: res['rankingCP'],
@@ -46,6 +47,8 @@ class Pokemon extends StatelessWidget {
                     ),
                   ],
                 ),
+
+                /// Stats Section
                 InfoStats(
                   color: color,
                   attack: res['attack'],

@@ -20,7 +20,7 @@ class PokeTypes extends StatelessWidget {
           color: Constants.getTypeColor(type),
         ),
         padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-        margin: EdgeInsets.only(right: 10.0, top: 2.0),
+        margin: EdgeInsets.only(right: 10.0),
         child: Text(
           type.toUpperCase(),
           style: TextStyle(
