@@ -13,7 +13,6 @@ class Application {
     return ThemeData(
       brightness: Brightness.light,
       primaryColor: Constants.colorBlue,
-      primarySwatch: Constants.colorRed,
       fontFamily: 'Roboto',
     );
   }

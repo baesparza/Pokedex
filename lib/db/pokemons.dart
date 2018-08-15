@@ -1,5 +1,5 @@
-class DB {
-  static List<Map<String, dynamic>> Pokemons = [
+class Pokemons {
+  static List<Map<String, dynamic>> pokemons = [
     {
       "colorHex": "#399494",
       "types": ["grass", "poison"],
