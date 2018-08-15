@@ -9,24 +9,24 @@ class Constants {
   static const Color colorGrey = Color(0xffeaedee);
 
   /// Types Colors
-  static const Color colorNormal = Color(0xffa9a878);
-  static const Color colorFighting = Color(0xffc02f27);
-  static const Color colorFlying = Color(0xffae94fd);
-  static const Color colorPoison = Color(0xffa03fa1);
-  static const Color colorGround = Color(0xffe2c168);
-  static const Color colorRock = Color(0xffb89f38);
-  static const Color colorBug = Color(0xffa8b820);
-  static const Color colorGhost = Color(0xff715799);
-  static const Color colorSteel = Color(0xffb8b8d0);
-  static const Color colorFire = Color(0xfff17f2e);
-  static const Color colorWater = Color(0xff6890f0);
-  static const Color colorGrass = Color(0xff78c850);
-  static const Color colorElectric = Color(0xfff8ce2a);
-  static const Color colorPsychic = Color(0xfff95788);
-  static const Color colorIce = Color(0xff98d9d9);
-  static const Color colorDragon = Color(0xff6f37f9);
-  static const Color colorDark = Color(0xff6f5747);
-  static const Color colorFairy = Color(0xffe87890);
+  static const Color colorNormal = Color(0xff6f6f6f);
+  static const Color colorFighting = Color(0xfff6695e);
+  static const Color colorFlying = Color(0xff5482ff);
+  static const Color colorPoison = Color(0xff4dd9ba);
+  static const Color colorGround = Color(0xff94776d);
+  static const Color colorRock = Color(0xffb1b1b1);
+  static const Color colorBug = Color(0xff33aba0);
+  static const Color colorGhost = Color(0xffe8e8e8);
+  static const Color colorSteel = Color(0xff8097a2);
+  static const Color colorFire = Color(0xffff794f);
+  static const Color colorWater = Color(0xff4dabf5);
+  static const Color colorGrass = Color(0xff70bf73);
+  static const Color colorElectric = Color(0xffffcd39);
+  static const Color colorPsychic = Color(0xffb052c0);
+  static const Color colorIce = Color(0xff9addfb);
+  static const Color colorDragon = Color(0xff7d89cd);
+  static const Color colorDark = Color(0xff515b60);
+  static const Color colorFairy = Color(0xffed4b82);
   static const Color colorUnknown = Color(0xff);
   // static const Color colorShadow = Color(0xff);
 

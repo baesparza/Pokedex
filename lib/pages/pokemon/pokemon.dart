@@ -112,9 +112,18 @@ class InfoMeta extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        _buildCard(text: '#$rankingCP', icon: Icons.star),
-        _buildCard(text: rarity, icon: Icons.ac_unit),
-        _buildCard(text: '$egg km', icon: Icons.ac_unit),
+        _buildCard(
+          text: '#$rankingCP',
+          icon: Icons.star,
+        ),
+        _buildCard(
+          text: rarity,
+          icon: Icons.ac_unit,
+        ),
+        _buildCard(
+          text: (egg == null) ? '-' : '$egg km',
+          icon: Icons.ac_unit,
+        ),
       ],
     );
   }
@@ -126,7 +135,10 @@ class InfoMeta extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.all(10.0),
           child: Column(
-            children: <Widget>[Icon(icon), Text(text)],
+            children: <Widget>[
+              Icon(icon),
+              Text((text == null) ? '-' : text),
+            ],
           ),
         ),
       ),
