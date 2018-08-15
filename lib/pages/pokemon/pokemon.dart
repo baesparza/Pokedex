@@ -20,6 +20,11 @@ class Pokemon extends StatelessWidget {
           name: res['name'],
           types: res['types'],
         ),
+        InfoMeta(
+          egg: res['egg'],
+          rankingCP: res['rankingCP'],
+          rarity: res['rarity'],
+        ),
         InfoDescription(
           description: res['description'],
         ),
@@ -89,6 +94,43 @@ class Pokemon extends StatelessWidget {
     }
     // return widgets
     return widgets;
+  }
+}
+
+class InfoMeta extends StatelessWidget {
+  const InfoMeta({
+    Key key,
+    @required this.rankingCP,
+    @required this.egg,
+    @required this.rarity,
+  }) : super(key: key);
+
+  final int egg, rankingCP;
+  final String rarity;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        _buildCard(text: '#$rankingCP', icon: Icons.star),
+        _buildCard(text: rarity, icon: Icons.ac_unit),
+        _buildCard(text: '$egg km', icon: Icons.ac_unit),
+      ],
+    );
+  }
+
+  Expanded _buildCard({@required String text, @required IconData icon}) {
+    return Expanded(
+      child: Card(
+        color: Constants.colorGrey,
+        child: Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            children: <Widget>[Icon(icon), Text(text)],
+          ),
+        ),
+      ),
+    );
   }
 }
 
