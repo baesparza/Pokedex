@@ -43,7 +43,9 @@ class Default extends StatelessWidget {
         ),
       ),
       actions: <Widget>[
-        _buildIconButton('assets/img/ranking.png', () {}),
+        _buildIconButton('assets/img/ranking.png', () {
+          Navigator.pushNamed(context, '/ranking');
+        }),
         _buildIconButton('assets/img/egg.png', () {
           Navigator.pushNamed(context, '/eggs');
         }),

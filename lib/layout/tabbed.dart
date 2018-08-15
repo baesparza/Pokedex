@@ -5,7 +5,7 @@ import 'package:pokedex/config/constants.dart';
 class Tabbed extends StatelessWidget {
   final Color primaryColor;
   final String title;
-  final int length;
+  final int length, initialIndex;
   final List<Tab> tabs;
   final List<Widget> children;
 
@@ -14,6 +14,7 @@ class Tabbed extends StatelessWidget {
     this.primaryColor,
     @required this.title,
     @required this.length,
+    @required this.initialIndex,
     @required this.tabs,
     @required this.children,
   }) : super(key: key);
@@ -21,11 +22,13 @@ class Tabbed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex: 1,
+      initialIndex: initialIndex,
       length: length,
       child: Scaffold(
         appBar: AppBar(
-          iconTheme: IconThemeData(),
+          iconTheme: IconThemeData(
+            color: (primaryColor == null) ? primaryColor : Constants.colorWhite,
+          ),
           titleSpacing: 0.0,
           backgroundColor: (primaryColor == null) ? Constants.colorWhite : primaryColor,
           title: Text(
@@ -41,7 +44,7 @@ class Tabbed extends StatelessWidget {
               border: Border(
                 bottom: BorderSide(
                   color: (primaryColor == null) ? Constants.colorBlue : Constants.colorWhite,
-                  width: 3.0,
+                  width: 4.0,
                 ),
               ),
             ),

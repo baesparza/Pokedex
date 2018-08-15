@@ -2,30 +2,22 @@ import 'package:flutter/material.dart';
 
 import 'package:pokedex/layout/tabbed.dart';
 
-class Eggs extends StatelessWidget {
+class Ranking extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Tabbed(
-      title: 'Eggs Distance',
-      length: 4,
-      initialIndex: 1,
+      title: 'Pokemon Ranking',
+      length: 2,
+      initialIndex: 0,
       tabs: <Tab>[
         Tab(
-          child: Text('All'),
+          child: Text('CP'),
         ),
         Tab(
-          child: Text('2 km'),
-        ),
-        Tab(
-          child: Text('5 km'),
-        ),
-        Tab(
-          child: Text('10 km'),
+          child: Text('HP'),
         ),
       ],
       children: <Widget>[
-        Container(),
-        Container(),
         Container(),
         Container(),
       ],

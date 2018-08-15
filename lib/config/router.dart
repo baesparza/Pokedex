@@ -4,12 +4,14 @@ import 'package:pokedex/pages/home.dart';
 import 'package:pokedex/pages/pokemon/pokemon.dart';
 import 'package:pokedex/pages/eggs/eggs.dart';
 import 'package:pokedex/db/pokemons.dart';
+import 'package:pokedex/pages/ranking/ranking.dart';
 
 class Router {
   static Map<String, WidgetBuilder> appRoutes() {
     return {
       '/': (BuildContext context) => Home(),
       '/eggs': (BuildContext context) => Eggs(),
+      '/ranking': (BuildContext context) => Ranking(),
     };
   }
 
