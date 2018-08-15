@@ -18,6 +18,7 @@ class Detail extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: primaryColor,
         title: Text(title),
+        titleSpacing: 0.0,
       ),
       body: child,
     );
