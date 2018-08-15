@@ -230,7 +230,7 @@ class InfoStats extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: <Widget>[
                 SizedBox(
-                  height: 16.0,
+                  height: 10.0,
                   child: LinearProgressIndicator(
                     value: per,
                     valueColor: valueColor,

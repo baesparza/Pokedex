@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:pokedex/config/constants.dart';
-import 'package:pokedex/widgets/ui/sidebar.dart';
 
 class Default extends StatelessWidget {
   final Widget child;
@@ -19,7 +18,6 @@ class Default extends StatelessWidget {
         key: _scaffoldKey,
         backgroundColor: Colors.white,
         appBar: _buildNavbar(),
-        drawer: Sidebar(),
         body: child,
       ),
     );
@@ -30,9 +28,11 @@ class Default extends StatelessWidget {
       iconTheme: IconThemeData(color: Constants.colorBlack),
       backgroundColor: Constants.colorWhite,
       titleSpacing: 0.0,
-      leading: MaterialButton(
-        child: Image.asset('assets/img/logo.png'),
-        onPressed: () => _scaffoldKey.currentState.openDrawer(),
+      leading: Material(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset('assets/img/logo.png'),
+        ),
       ),
       title: Text(
         'Pokedex',

@@ -15,9 +15,6 @@ class Home extends StatefulWidget {
 class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    // calc row using query
-    int count = (MediaQuery.of(context).orientation == Orientation.landscape) ? 5 : 3;
-    // draw widget
     return Default(
       child: Column(
         children: <Widget>[
@@ -28,7 +25,7 @@ class HomeState extends State<Home> {
               primary: false,
               padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: count,
+                crossAxisCount: (MediaQuery.of(context).orientation == Orientation.landscape) ? 5 : 3,
               ),
             ),
           ),
@@ -42,16 +39,13 @@ class HomeState extends State<Home> {
     String n = '${index+1}';
     String id = '#' + '0' * (3 - n.length) + n;
     // draw card
-    return GestureDetector(
-      onTap: () {
+    return MaterialButton(
+      onPressed: () {
         Navigator.pushNamed(context, '/pokemon/$index');
       },
-      onLongPress: () {
-        print('LongPressed');
-      },
       child: Card(
-        color: Constants.colorGrey,
-        elevation: 2.0,
+        color: Colors.transparent,
+        elevation: 0.0,
         child: Container(
           padding: const EdgeInsets.all(2.0),
           child: Column(
