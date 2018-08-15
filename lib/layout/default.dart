@@ -17,13 +17,13 @@ class Default extends StatelessWidget {
       child: Scaffold(
         key: _scaffoldKey,
         backgroundColor: Colors.white,
-        appBar: _buildNavbar(),
+        appBar: _buildNavbar(context),
         body: child,
       ),
     );
   }
 
-  AppBar _buildNavbar() {
+  AppBar _buildNavbar(BuildContext context) {
     return AppBar(
       iconTheme: IconThemeData(color: Constants.colorBlack),
       backgroundColor: Constants.colorWhite,
@@ -44,7 +44,9 @@ class Default extends StatelessWidget {
       ),
       actions: <Widget>[
         _buildIconButton('assets/img/ranking.png', () {}),
-        _buildIconButton('assets/img/egg.png', () {}),
+        _buildIconButton('assets/img/egg.png', () {
+          Navigator.pushNamed(context, '/eggs');
+        }),
         _buildIconButton('assets/img/search.png', () {}),
       ],
     );
@@ -54,7 +56,7 @@ class Default extends StatelessWidget {
     return MaterialButton(
       minWidth: 10.0,
       child: Image.asset(path),
-      onPressed: () => _scaffoldKey.currentState.openDrawer(),
+      onPressed: fn,
     );
   }
 }

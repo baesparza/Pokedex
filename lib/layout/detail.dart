@@ -8,7 +8,7 @@ class Detail extends StatelessWidget {
   Detail({
     Key key,
     @required this.child,
-    @required this.primaryColor,
+    this.primaryColor,
     @required this.title,
   }) : super(key: key);
 
