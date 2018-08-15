@@ -10,11 +10,11 @@ class Pokemon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Color color = Color(int.parse('0xff' + res['colorHex'].substring(1)));
     return Detail(
-      primaryColor: Color(int.parse('0xff' + res['colorHex'].substring(1))),
+      primaryColor: color,
       title: res['name'] + ' Details',
       children: <Widget>[
-        Text(res.toString()),
         InfoHeader(
           number: res['number'].toString(),
           name: res['name'],
@@ -23,26 +23,21 @@ class Pokemon extends StatelessWidget {
         InfoDescription(
           description: res['description'],
         ),
-        Pokemon._buildSections(
-          children: <Widget>[
-            Pokemon._buildSubTitles('Statistics'),
-          ],
+        InfoStats(
+          color: color,
+          attack: res['attack'],
+          defense: res['defense'],
+          maxCP: res['maxCP'],
+          maxHP: res['maxHP'],
+          stamina: res['stamina'],
         ),
-        Pokemon._buildSections(
-          children: <Widget>[
-            Pokemon._buildSubTitles('Weaknesses'),
-            Row(
-              children: Pokemon._buildTypes(res['weaknesses']),
-            ),
-          ],
+        InfoAbilities(
+          title: 'Weaknesses',
+          types: res['weaknesses'],
         ),
-        Pokemon._buildSections(
-          children: <Widget>[
-            Pokemon._buildSubTitles('Strengths'),
-            Row(
-              children: Pokemon._buildTypes(res['strengths']),
-            ),
-          ],
+        InfoAbilities(
+          title: 'Strengths',
+          types: res['strengths'],
         ),
       ],
     );
@@ -94,6 +89,138 @@ class Pokemon extends StatelessWidget {
     }
     // return widgets
     return widgets;
+  }
+}
+
+class InfoStats extends StatelessWidget {
+  final Animation<Color> valueColor;
+  final int maxCP;
+  final int maxHP;
+  final int attack;
+  final int defense;
+  final int stamina;
+
+  InfoStats({
+    @required Color color,
+    @required this.maxCP,
+    @required this.maxHP,
+    @required this.attack,
+    @required this.defense,
+    @required this.stamina,
+  }) : valueColor = AlwaysStoppedAnimation<Color>(color);
+
+  @override
+  Widget build(BuildContext context) {
+    return Pokemon._buildSections(
+      children: <Widget>[
+        Pokemon._buildSubTitles('Statistics'),
+        _buildStats(
+          text: 'Max CP',
+          value: maxCP,
+          full: 4300,
+        ),
+        _buildStats(
+          text: 'Max HP',
+          value: maxHP,
+          full: 420,
+        ),
+        _buildStats(
+          text: 'Attack',
+          value: attack,
+          full: 300,
+        ),
+        _buildStats(
+          text: 'Defense',
+          value: defense,
+          full: 250,
+        ),
+        _buildStats(
+          text: 'Stamina',
+          value: stamina,
+          full: 520,
+        ),
+      ],
+    );
+  }
+
+  Widget _buildStats({
+    @required String text,
+    @required int full,
+    @required int value,
+  }) {
+    // calc percentage
+    double per = value / full;
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        vertical: 5.0,
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Container(
+            child: Text(
+              text,
+              style: TextStyle(
+                fontSize: 16.0,
+              ),
+            ),
+            width: 80.0,
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: <Widget>[
+                SizedBox(
+                  height: 16.0,
+                  child: LinearProgressIndicator(
+                    value: per,
+                    valueColor: valueColor,
+                    backgroundColor: Constants.colorGrey,
+                  ),
+                ),
+                RichText(
+                  text: TextSpan(
+                    style: TextStyle(
+                      color: Constants.colorBlack,
+                    ),
+                    children: <TextSpan>[
+                      TextSpan(text: value.toString()),
+                      TextSpan(text: '/'),
+                      TextSpan(text: full.toString()),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class InfoAbilities extends StatelessWidget {
+  const InfoAbilities({
+    Key key,
+    @required this.title,
+    @required this.types,
+  }) : super(key: key);
+
+  final List<String> types;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Pokemon._buildSections(
+        children: <Widget>[
+          Pokemon._buildSubTitles(title),
+          Row(
+            children: Pokemon._buildTypes(types),
+          ),
+        ],
+      ),
+    );
   }
 }
 
