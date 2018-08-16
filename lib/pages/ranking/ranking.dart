@@ -9,13 +9,9 @@ class Ranking extends StatelessWidget {
     return Tabbed(
       title: 'Pokemon Ranking',
       length: 2,
-      tabs: <Tab>[
-        Tab(
-          child: Text('CP'),
-        ),
-        Tab(
-          child: Text('HP'),
-        ),
+      tabs: <String>[
+        'CP',
+        'HP',
       ],
       children: <Widget>[
         Pokemons(

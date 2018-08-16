@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Tabbed extends StatelessWidget {
   final String title;
   final int length;
-  final List<Tab> tabs;
+  final List<String> tabs;
   final List<Widget> children;
 
   Tabbed({
@@ -39,7 +39,12 @@ class Tabbed extends StatelessWidget {
             indicatorColor: Theme.of(context).primaryColor,
 
             // Tabs
-            tabs: tabs,
+            tabs: tabs
+                .map((String tab) => Text(
+                      tab,
+                      style: Theme.of(context).textTheme.headline,
+                    ))
+                .toList(),
           ),
         ),
         body: TabBarView(

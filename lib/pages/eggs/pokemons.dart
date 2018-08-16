@@ -26,6 +26,7 @@ class Pokemons extends StatelessWidget {
       child: ListView.builder(
         itemBuilder: _buidlPokemon,
         itemCount: pokemons.length,
+        primary: false,
       ),
     );
   }
@@ -51,7 +52,7 @@ class Pokemons extends StatelessWidget {
                 Number(pokemon['number']),
                 Text(
                   pokemon['name'],
-                  style: Theme.of(context).textTheme.display1,
+                  style: Theme.of(context).textTheme.display2,
                 ),
               ],
             ),
@@ -68,13 +69,11 @@ class Pokemons extends StatelessWidget {
                 ),
                 Text(
                   '${pokemon['eggDistance']} km',
-                  style: Theme.of(context).textTheme.body2,
+                  style: Theme.of(context).textTheme.caption,
                 ),
               ],
             ),
           ),
-
-          /// end wid
         ],
       ),
 

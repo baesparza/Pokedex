@@ -40,11 +40,13 @@ class Application {
           fontWeight: FontWeight.bold,
           fontSize: 23.0,
         ),
+
         // Image icon
         caption: TextStyle(
           color: Constants.colorBlue,
           fontWeight: FontWeight.bold,
         ),
+
         // Pokemon type
         headline: TextStyle(
           fontSize: 16.0,
@@ -60,34 +62,43 @@ class Application {
           color: Constants.colorBlue,
           fontWeight: FontWeight.bold,
         ),
+
         // Pokemon number
         caption: TextStyle(
           fontSize: 16.0,
           color: Constants.colorBlue.withAlpha(Constants.alpha),
         ),
+
         // style for paragraphs
         body1: TextStyle(
           fontSize: 17.0,
           color: Constants.colorBlue,
         ),
-        // list
+
+        // list home pokemons
         subhead: TextStyle(
           color: Constants.colorBlue,
           fontSize: 16.0,
         ),
+
         // section title
         display1: TextStyle(
           fontSize: 21.0,
           fontWeight: FontWeight.w600,
           color: Constants.colorBlue,
         ),
-        body2: TextStyle(
-          color: Constants.colorBlue.withAlpha(Constants.alpha),
-          fontSize: 17.0,
+
+        // Tabbed pokemon title and number
+        display2: TextStyle(
+          fontSize: 21.0,
+          fontWeight: FontWeight.w600,
+          color: Constants.colorBlue,
         ),
+
+        // Tabs title
         headline: TextStyle(
           fontSize: 16.0,
-          color: Constants.colorBlue.withAlpha(Constants.alpha),
+          color: Constants.colorBlue,
         ),
       ),
     );

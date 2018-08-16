@@ -9,19 +9,11 @@ class Eggs extends StatelessWidget {
     return Tabbed(
       title: 'Eggs Distance',
       length: 4,
-      tabs: <Tab>[
-        Tab(
-          child: Text('All'),
-        ),
-        Tab(
-          child: Text('2 km'),
-        ),
-        Tab(
-          child: Text('5 km'),
-        ),
-        Tab(
-          child: Text('10 km'),
-        ),
+      tabs: <String>[
+        'All',
+        '2 km',
+        '5 km',
+        '10 km',
       ],
       children: <Widget>[
         Pokemons(distance: 0),
