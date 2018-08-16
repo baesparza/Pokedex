@@ -22,7 +22,7 @@ class Pokemon extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
         children: <Widget>[
           InfoHeader(
-            number: res['number'].toString(),
+            number: res['number'],
             types: res['types'],
           ),
 
@@ -36,14 +36,7 @@ class Pokemon extends StatelessWidget {
           /// Description Section
           Section(
             title: 'Description',
-            children: <Widget>[
-              Text(
-                res['description'],
-                style: TextStyle(
-                  fontSize: 16.0,
-                ),
-              ),
-            ],
+            child: Text(res['description']),
           ),
 
           /// Stats Section
@@ -59,17 +52,13 @@ class Pokemon extends StatelessWidget {
           /// Weaknesses Section
           Section(
             title: 'Weaknesses',
-            children: <Widget>[
-              PokeTypes(types: res['weaknesses']),
-            ],
+            child: PokeTypes(types: res['weaknesses']),
           ),
 
           /// Strengths Section
           Section(
             title: 'Strengths',
-            children: <Widget>[
-              PokeTypes(types: res['strengths']),
-            ],
+            child: PokeTypes(types: res['strengths']),
           ),
         ],
       ),

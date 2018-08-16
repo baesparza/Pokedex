@@ -1,27 +1,13 @@
 import 'package:flutter/material.dart';
 
 class Section extends StatelessWidget {
-   Section({
+  Section({
     Key key,
-    @required this.children,
+    @required this.child,
     @required this.title,
-  }) : super(key: key) {
-    children.insert(
-      0,
-      Padding(
-        padding: const EdgeInsets.only(bottom: 13.0),
-        child: Text(
-          title,
-          style: TextStyle(
-            fontSize: 21.0,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-      ),
-    );
-  }
+  }) : super(key: key);
 
-  final List<Widget> children;
+  final Widget child;
   final String title;
 
   @override
@@ -30,7 +16,19 @@ class Section extends StatelessWidget {
       padding: EdgeInsets.only(top: 30.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: children,
+        children: <Widget>[
+          /// Title
+          Padding(
+            padding: const EdgeInsets.only(bottom: 13.0),
+            child: Text(
+              title,
+              style: Theme.of(context).textTheme.display1,
+            ),
+          ),
+
+          /// content
+          child,
+        ],
       ),
     );
   }

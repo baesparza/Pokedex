@@ -30,13 +30,17 @@ class Application {
           color: Constants.colorBlue.withAlpha(Constants.alpha),
           fontSize: 17.0,
         ),
-        caption: TextStyle(color: Colors.green),
+        caption: TextStyle(
+          color: Colors.green,
+        ),
         display1: TextStyle(
           fontSize: 21.0,
           fontWeight: FontWeight.w600,
           color: Constants.colorBlue,
         ),
-        body1: TextStyle(color: Colors.green),
+        body1: TextStyle(
+          color: Constants.colorBlue,
+        ),
         headline: TextStyle(
           fontSize: 15.0,
           color: Constants.colorBlue.withAlpha(Constants.alpha),

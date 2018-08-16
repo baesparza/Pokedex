@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:pokedex/config/constants.dart';
 
 class InfoMeta extends StatelessWidget {
@@ -35,7 +36,7 @@ class InfoMeta extends StatelessWidget {
   Expanded _buildCard({@required String text, @required String path}) {
     return Expanded(
       child: Card(
-        color: Constants.colorGrey,
+        color: Constants.colorLightGrey,
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 16.0),
           child: Column(

@@ -24,13 +24,15 @@ class InfoStats extends StatelessWidget {
   Widget build(BuildContext context) {
     return Section(
       title: 'Statistics',
-      children: <Widget>[
-        _buildStats(text: 'Max CP', value: maxCP, full: 4300),
-        _buildStats(text: 'Max HP', value: maxHP, full: 420),
-        _buildStats(text: 'Attack', value: attack, full: 300),
-        _buildStats(text: 'Defense', value: defense, full: 250),
-        _buildStats(text: 'Stamina', value: stamina, full: 520),
-      ],
+      child: Column(
+        children: <Widget>[
+          _buildStats(text: 'Max CP', value: maxCP, full: 4300, context: context),
+          _buildStats(text: 'Max HP', value: maxHP, full: 420, context: context),
+          _buildStats(text: 'Attack', value: attack, full: 300, context: context),
+          _buildStats(text: 'Defense', value: defense, full: 250, context: context),
+          _buildStats(text: 'Stamina', value: stamina, full: 520, context: context),
+        ],
+      ),
     );
   }
 
@@ -38,6 +40,7 @@ class InfoStats extends StatelessWidget {
     @required String text,
     @required int full,
     @required int value,
+    @required BuildContext context,
   }) {
     // calc percentage
     double per = value / full;
@@ -48,15 +51,13 @@ class InfoStats extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          /// Stat name
           Container(
-            child: Text(
-              text,
-              style: TextStyle(
-                fontSize: 16.0,
-              ),
-            ),
+            child: Text(text),
             width: 80.0,
           ),
+
+          /// Progress
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
@@ -66,14 +67,12 @@ class InfoStats extends StatelessWidget {
                   child: LinearProgressIndicator(
                     value: per,
                     valueColor: valueColor,
-                    backgroundColor: Constants.colorGrey,
+                    backgroundColor: Constants.colorLightGrey,
                   ),
                 ),
                 RichText(
                   text: TextSpan(
-                    style: TextStyle(
-                      color: Constants.colorBlue,
-                    ),
+                    style: Theme.of(context).textTheme.headline,
                     children: <TextSpan>[
                       TextSpan(text: value.toString()),
                       TextSpan(text: '/'),

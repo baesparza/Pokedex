@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokedex/widgets/number.dart';
 import 'package:pokedex/widgets/poke-types.dart';
 
 class InfoHeader extends StatelessWidget {
@@ -8,7 +9,7 @@ class InfoHeader extends StatelessWidget {
     @required this.types,
   }) : super(key: key);
 
-  final String number;
+  final int number;
   final List<String> types;
 
   @override
@@ -23,10 +24,7 @@ class InfoHeader extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
-              '#' + '0' * (3 - number.length) + number,
-              style: TextStyle(fontSize: 16.0),
-            ),
+            Number(number),
             PokeTypes(
               types: types,
             )

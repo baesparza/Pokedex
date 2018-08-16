@@ -5,6 +5,7 @@ class Constants {
   static const Color colorBlue = Color(0xff4d6478);
   static const Color colorWhite = Color(0xfffefefe);
   static const Color colorGrey = Color(0xffa6b0b6);
+  static const Color colorLightGrey = Color(0xfff0f0f0);
 
   /// Static alpha value with alpha
   static const int alpha = 180;
