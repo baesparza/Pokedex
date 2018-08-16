@@ -18,7 +18,7 @@ class Section extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           /// Title
-          Padding(
+          Container(
             padding: const EdgeInsets.only(bottom: 13.0),
             child: Text(
               title,

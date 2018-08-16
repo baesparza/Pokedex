@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/config/constants.dart';
-
 class InfoMeta extends StatelessWidget {
   const InfoMeta({
     Key key,
@@ -18,14 +16,17 @@ class InfoMeta extends StatelessWidget {
     return Row(
       children: <Widget>[
         _buildCard(
+          context: context,
           text: '#$rankingCP',
           path: 'assets/img/ranking.png',
         ),
         _buildCard(
+          context: context,
           text: rarity,
           path: 'assets/img/pokeball.png',
         ),
         _buildCard(
+          context: context,
           text: (egg == null) ? '-' : '$egg km',
           path: 'assets/img/${(egg == null) ? 'no_egg' : 'egg'}.png',
         ),
@@ -33,20 +34,26 @@ class InfoMeta extends StatelessWidget {
     );
   }
 
-  Expanded _buildCard({@required String text, @required String path}) {
+  /// Build Card with pokemon stats
+  Widget _buildCard({
+    @required BuildContext context,
+    @required String text,
+    @required String path,
+  }) {
     return Expanded(
       child: Card(
-        color: Constants.colorLightGrey,
+        elevation: 2.0,
+        color: Theme.of(context).cardColor,
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 16.0),
           child: Column(
             children: <Widget>[
+              // image
               Image.asset(path),
+              // text desc
               Text(
                 (text == null) ? '-' : text,
-                style: TextStyle(
-                  fontSize: 18.0,
-                ),
+                style: Theme.of(context).primaryTextTheme.caption,
               ),
             ],
           ),

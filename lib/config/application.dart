@@ -19,49 +19,66 @@ class Application {
       backgroundColor: Constants.colorWhite,
       scaffoldBackgroundColor: Constants.colorWhite,
 
-      // theme for icons on white background
+      // Card Color
+      cardColor: Constants.colorLightGrey,
+
+      // theme for icons on bacgroundColor
       iconTheme: IconThemeData(
         color: Constants.colorBlue,
       ),
 
-      // theme for icons on colored background
+      // theme for icons on primary color or other colors
       primaryIconTheme: IconThemeData(
         color: Constants.colorWhite,
       ),
 
-      // Theme on colored background
+      // TextTheme for text on primary color or other colors
       primaryTextTheme: TextTheme(
-        // Title for colored background
+        // Title
         title: TextStyle(
           color: Constants.colorWhite,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.bold,
           fontSize: 23.0,
+        ),
+        // Image icon
+        caption: TextStyle(
+          color: Constants.colorBlue,
+          fontWeight: FontWeight.bold,
+        ),
+        // Pokemon type
+        headline: TextStyle(
+          fontSize: 16.0,
+          color: Constants.colorWhite,
+          fontWeight: FontWeight.bold,
         ),
       ),
 
-      // Asume Background is Light
+      // theme for text on bacgroundColor
       textTheme: TextTheme(
-        // Title with white background
+        // Title
         title: TextStyle(
-          //color: Colors.red,
           color: Constants.colorBlue,
-          fontWeight: FontWeight.w500,
-          fontSize: 23.0,
+          fontWeight: FontWeight.bold,
         ),
+        // Pokemon number
+        caption: TextStyle(
+          fontSize: 16.0,
+          color: Constants.colorBlue.withAlpha(Constants.alpha),
+        ),
+        // style for paragraphs
+        body1: TextStyle(
+          fontSize: 17.0,
+          color: Constants.colorBlue,
+        ),
+        // list
         subhead: TextStyle(
           color: Constants.colorBlue,
           fontSize: 16.0,
         ),
-        caption: TextStyle(
-          color: Colors.green,
-        ),
+        // section title
         display1: TextStyle(
           fontSize: 21.0,
           fontWeight: FontWeight.w600,
-          color: Constants.colorBlue,
-        ),
-        body1: TextStyle(
-          fontSize: 17.0,
           color: Constants.colorBlue,
         ),
         body2: TextStyle(

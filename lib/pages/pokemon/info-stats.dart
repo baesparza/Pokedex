@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:pokedex/config/constants.dart';
-import 'package:pokedex/widgets/section.dart';
+import 'package:pokedex/widgets/pokemon/section.dart';
 
 class InfoStats extends StatelessWidget {
   final Animation<Color> valueColor;
@@ -26,34 +26,34 @@ class InfoStats extends StatelessWidget {
       title: 'Statistics',
       child: Column(
         children: <Widget>[
-          _buildStats(text: 'Max CP', value: maxCP, full: 4300, context: context),
-          _buildStats(text: 'Max HP', value: maxHP, full: 420, context: context),
-          _buildStats(text: 'Attack', value: attack, full: 300, context: context),
-          _buildStats(text: 'Defense', value: defense, full: 250, context: context),
-          _buildStats(text: 'Stamina', value: stamina, full: 520, context: context),
+          _buildProgressBar(text: 'Max CP', value: maxCP, full: 4300, context: context),
+          _buildProgressBar(text: 'Max HP', value: maxHP, full: 420, context: context),
+          _buildProgressBar(text: 'Attack', value: attack, full: 300, context: context),
+          _buildProgressBar(text: 'Defense', value: defense, full: 250, context: context),
+          _buildProgressBar(text: 'Stamina', value: stamina, full: 520, context: context),
         ],
       ),
     );
   }
 
-  Widget _buildStats({
+  // build progress bar
+  Widget _buildProgressBar({
     @required String text,
     @required int full,
     @required int value,
     @required BuildContext context,
   }) {
-    // calc percentage
-    double per = value / full;
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 5.0,
-      ),
+      padding: const EdgeInsets.symmetric(vertical: 5.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           /// Stat name
           Container(
-            child: Text(text),
+            child: Text(
+              text,
+              style: Theme.of(context).textTheme.subhead,
+            ),
             width: 80.0,
           ),
 
@@ -65,21 +65,15 @@ class InfoStats extends StatelessWidget {
                 SizedBox(
                   height: 10.0,
                   child: LinearProgressIndicator(
-                    value: per,
+                    value: value / full,
                     valueColor: valueColor,
                     backgroundColor: Constants.colorLightGrey,
                   ),
                 ),
-                RichText(
-                  text: TextSpan(
-                    style: Theme.of(context).textTheme.headline,
-                    children: <TextSpan>[
-                      TextSpan(text: value.toString()),
-                      TextSpan(text: '/'),
-                      TextSpan(text: full.toString()),
-                    ],
-                  ),
-                )
+                Text(
+                  '$value/$full',
+                  style: Theme.of(context).textTheme.headline,
+                ),
               ],
             ),
           )
