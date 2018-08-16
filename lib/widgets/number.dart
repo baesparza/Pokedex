@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex/config/constants.dart';
 
 class Number extends StatelessWidget {
   const Number(
@@ -14,10 +13,7 @@ class Number extends StatelessWidget {
     String n = number.toString();
     return Text(
       '#' + '0' * (3 - n.length) + n,
-      style: TextStyle(
-        fontSize: 15.0,
-        color: Constants.colorBlue.withAlpha(Constants.alpha),
-      ),
+      style: Theme.of(context).textTheme.headline,
     );
   }
 }

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/config/constants.dart';
-
 class Default extends StatelessWidget {
   final Widget child;
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();

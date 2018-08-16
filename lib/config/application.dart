@@ -22,7 +22,10 @@ class Application {
           fontWeight: FontWeight.w500,
           fontSize: 23.0,
         ),
-        body1: TextStyle(color: Colors.green),
+        body1: TextStyle(
+          color: Constants.colorBlue,
+          fontSize: 16.0,
+        ),
         body2: TextStyle(color: Colors.green),
         button: TextStyle(color: Colors.green),
         caption: TextStyle(color: Colors.green),
@@ -30,8 +33,11 @@ class Application {
         display2: TextStyle(color: Colors.green),
         display3: TextStyle(color: Colors.green),
         display4: TextStyle(color: Colors.green),
-        headline: TextStyle(color: Colors.green),
         subhead: TextStyle(color: Colors.green),
+        headline : TextStyle(
+          fontSize: 15.0,
+          color: Constants.colorBlue.withAlpha(Constants.alpha),
+        ),
       ),
     );
   }

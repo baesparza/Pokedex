@@ -30,36 +30,34 @@ class Home extends StatelessWidget {
 
   Widget _buildGridPokemons(BuildContext context, int index) {
     Map<String, dynamic> pokemon = pokemons[index];
+
+    /// widget
     return MaterialButton(
+      padding: const EdgeInsets.all(3.0),
+
+      /// actions
       onPressed: () {
         Navigator.pushNamed(context, '/pokemon/$index');
       },
-      child: Card(
-        color: Colors.transparent,
-        elevation: 0.0,
-        child: Container(
-          padding: const EdgeInsets.all(2.0),
-          child: Column(
-            children: <Widget>[
-              /// Image
-              Expanded(
-                child: Image.network(
-                    'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F${pokemon['number']}.png?alt=media'),
-              ),
-
-              /// Pokemon name
-              Text(
-                pokemons[index]['name'],
-                style: TextStyle(fontWeight: FontWeight.w500,),
-              ),
-
-              /// Pokemon number
-              Number(pokemon['number']),
-
-              /// end Card
-            ],
+      child: Column(
+        children: <Widget>[
+          /// Image
+          Expanded(
+            child: Image.network(
+                'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F${pokemon['number']}.png?alt=media'),
           ),
-        ),
+
+          /// Pokemon name
+          Text(
+            pokemons[index]['name'],
+            style: Theme.of(context).textTheme.body1,
+          ),
+
+          /// Pokemon number
+          Number(pokemon['number']),
+
+          /// end Card
+        ],
       ),
     );
   }
