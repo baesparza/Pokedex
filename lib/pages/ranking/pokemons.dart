@@ -1,23 +1,17 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/db/eggs.dart';
+import 'package:pokedex/config/constants.dart';
+import 'package:pokedex/db/pokemons.dart' as db;
 
 class Pokemons extends StatelessWidget {
   Pokemons({
     Key key,
-    @required int distance,
-  }) : super(key: key) {
-    pokemons = Eggs.eggs();
-    if (distance == 0) {
-      return;
-    }
-    // use var distance as a filter
-    pokemons.retainWhere((Map<String, dynamic> pokemon) {
-      return pokemon['eggDistance'] == distance;
-    });
-  }
+  }) : super(key: key);
 
-  List<Map<String, dynamic>> pokemons;
+  List<Map<String, dynamic>> pokemons = db.Pokemons.pokemons;
+
+  String param = 'maxCP', smallParam = 'CP';
+  String param2 = 'maxHP';
 
   @override
   Widget build(BuildContext context) {
@@ -65,16 +59,22 @@ class Pokemons extends StatelessWidget {
             ),
           ),
 
-          /// Egg icon
+          /// Ranking
           Container(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: <Widget>[
-                Image.asset('assets/img/egg.png'),
                 Text(
-                  '${pokemon['eggDistance']} km',
+                  '#${index + 1}',
+                  style: TextStyle(
+                    fontSize: 21.0,
+                  ),
+                ),
+                Text(
+                  '${pokemon[param]} $smallParam',
                   style: TextStyle(
                     fontSize: 18.0,
+                    color: Constants.colorGrey,
                   ),
                 ),
               ],

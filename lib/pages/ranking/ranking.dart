@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:pokedex/layout/tabbed.dart';
+import 'package:pokedex/pages/ranking/pokemons.dart';
 
 class Ranking extends StatelessWidget {
   @override
@@ -8,7 +9,6 @@ class Ranking extends StatelessWidget {
     return Tabbed(
       title: 'Pokemon Ranking',
       length: 2,
-      initialIndex: 0,
       tabs: <Tab>[
         Tab(
           child: Text('CP'),
@@ -18,8 +18,8 @@ class Ranking extends StatelessWidget {
         ),
       ],
       children: <Widget>[
-        Container(),
-        Container(),
+        Pokemons(),
+        Pokemons(),
       ],
     );
   }

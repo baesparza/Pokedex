@@ -9,7 +9,6 @@ class Eggs extends StatelessWidget {
     return Tabbed(
       title: 'Eggs Distance',
       length: 4,
-      initialIndex: 1,
       tabs: <Tab>[
         Tab(
           child: Text('All'),
