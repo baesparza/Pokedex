@@ -6,12 +6,19 @@ import 'package:pokedex/db/pokemons.dart' as db;
 class Pokemons extends StatelessWidget {
   Pokemons({
     Key key,
-  }) : super(key: key);
+    @required bool sortByHP,
+  }) : super(key: key) {
+    param = (sortByHP) ? 'maxHP' : 'maxCP';
+    smallParam = (sortByHP) ? 'HP' : 'CP';
 
-  List<Map<String, dynamic>> pokemons = db.Pokemons.pokemons;
+    /// sort Pokemons by param
+    pokemons.sort((Map<String, dynamic> a, Map<String, dynamic> b) {
+      return a[param] >= b[param] ? -1 : 1;
+    });
+  }
 
-  String param = 'maxCP', smallParam = 'CP';
-  String param2 = 'maxHP';
+  List<Map<String, dynamic>> pokemons = db.Pokemons.pokemons();
+  String param, smallParam;
 
   @override
   Widget build(BuildContext context) {

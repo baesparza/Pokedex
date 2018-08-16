@@ -18,8 +18,12 @@ class Ranking extends StatelessWidget {
         ),
       ],
       children: <Widget>[
-        Pokemons(),
-        Pokemons(),
+        Pokemons(
+          sortByHP: false,
+        ),
+        Pokemons(
+          sortByHP: true,
+        ),
       ],
     );
   }

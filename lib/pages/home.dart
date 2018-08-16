@@ -4,7 +4,7 @@ import 'package:pokedex/layout/default.dart';
 import 'package:pokedex/db/pokemons.dart';
 
 class Home extends StatefulWidget {
-  final List<Map<String, dynamic>> pokemons = Pokemons.pokemons;
+  final List<Map<String, dynamic>> pokemons = Pokemons.pokemons();
   @override
   HomeState createState() {
     return HomeState();

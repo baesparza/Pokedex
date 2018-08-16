@@ -21,7 +21,7 @@ class Router {
     if (path[0].isNotEmpty) return null;
 
     if (path[1] == 'pokemon') {
-      List<Map<String, dynamic>> pokes = Pokemons.pokemons;
+      List<Map<String, dynamic>> pokes = Pokemons.pokemons();
       return MaterialPageRoute(builder: (BuildContext context) {
         return Pokemon(pokes[int.parse(path[2])]);
       });
