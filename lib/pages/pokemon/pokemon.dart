@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:pokedex/layout/detail.dart';
 import 'package:pokedex/pages/pokemon/info-stats.dart';
-import 'package:pokedex/pages/pokemon/meta.dart';
+import 'package:pokedex/pages/pokemon/info-meta.dart';
 import 'package:pokedex/pages/pokemon/info-header.dart';
 import 'package:pokedex/widgets/poke-types.dart';
 import 'package:pokedex/widgets/section.dart';
