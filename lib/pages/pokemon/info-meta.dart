@@ -51,9 +51,12 @@ class InfoMeta extends StatelessWidget {
               // image
               Image.asset(path),
               // text desc
-              Text(
-                (text == null) ? '-' : text,
-                style: Theme.of(context).primaryTextTheme.caption,
+              Container(
+                padding: const EdgeInsets.only(top: 13.0),
+                child: Text(
+                  (text == null) ? '-' : text,
+                  style: Theme.of(context).primaryTextTheme.caption,
+                ),
               ),
             ],
           ),

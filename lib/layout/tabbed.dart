@@ -40,9 +40,11 @@ class Tabbed extends StatelessWidget {
 
             // Tabs
             tabs: tabs
-                .map((String tab) => Text(
-                      tab,
-                      style: Theme.of(context).textTheme.headline,
+                .map((String tab) => Container(
+                      height: kTextTabBarHeight,
+                      child: Center(
+                        child: Text(tab, style: Theme.of(context).textTheme.headline),
+                      ),
                     ))
                 .toList(),
           ),

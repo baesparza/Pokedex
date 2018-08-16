@@ -72,7 +72,7 @@ class InfoStats extends StatelessWidget {
                 ),
                 Text(
                   '$value/$full',
-                  style: Theme.of(context).textTheme.headline,
+                  style: Theme.of(context).textTheme.caption,
                 ),
               ],
             ),

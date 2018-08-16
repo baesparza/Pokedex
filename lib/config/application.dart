@@ -37,14 +37,13 @@ class Application {
         // Title
         title: TextStyle(
           color: Constants.colorWhite,
-          fontWeight: FontWeight.bold,
-          fontSize: 23.0,
         ),
 
-        // Image icon
+        // Image metadata icon
         caption: TextStyle(
           color: Constants.colorBlue,
           fontWeight: FontWeight.bold,
+          fontSize: 16.0,
         ),
 
         // Pokemon type
@@ -60,7 +59,6 @@ class Application {
         // Title
         title: TextStyle(
           color: Constants.colorBlue,
-          fontWeight: FontWeight.bold,
         ),
 
         // Pokemon number
@@ -78,12 +76,13 @@ class Application {
         // list home pokemons
         subhead: TextStyle(
           color: Constants.colorBlue,
-          fontSize: 16.0,
+          fontWeight: FontWeight.bold,
+          fontSize: 17.0,
         ),
 
         // section title
         display1: TextStyle(
-          fontSize: 21.0,
+          fontSize: 20.0,
           fontWeight: FontWeight.w600,
           color: Constants.colorBlue,
         ),
@@ -91,13 +90,14 @@ class Application {
         // Tabbed pokemon title and number
         display2: TextStyle(
           fontSize: 21.0,
-          fontWeight: FontWeight.w600,
           color: Constants.colorBlue,
+          fontWeight: FontWeight.bold,
         ),
 
         // Tabs title
         headline: TextStyle(
           fontSize: 16.0,
+          fontWeight: FontWeight.w600,
           color: Constants.colorBlue,
         ),
       ),
