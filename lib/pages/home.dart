@@ -50,7 +50,7 @@ class Home extends StatelessWidget {
           /// Pokemon name
           Text(
             pokemons[index]['name'],
-            style: Theme.of(context).textTheme.body1,
+            style: Theme.of(context).textTheme.subhead,
           ),
 
           /// Pokemon number
