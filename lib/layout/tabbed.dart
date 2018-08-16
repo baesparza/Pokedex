@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/config/constants.dart';
-
 class Tabbed extends StatelessWidget {
-  final Color primaryColor;
   final String title;
   final int length;
   final List<Tab> tabs;
@@ -11,7 +8,6 @@ class Tabbed extends StatelessWidget {
 
   Tabbed({
     Key key,
-    this.primaryColor,
     @required this.title,
     @required this.length,
     @required this.tabs,
@@ -23,27 +19,27 @@ class Tabbed extends StatelessWidget {
     return DefaultTabController(
       length: length,
       child: Scaffold(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+
+        // Navbar
         appBar: AppBar(
-          iconTheme: IconThemeData(
-            color: (primaryColor == null) ? primaryColor : Constants.colorWhite,
-          ),
+          iconTheme: Theme.of(context).iconTheme,
           titleSpacing: 0.0,
-          backgroundColor: (primaryColor == null) ? Constants.colorWhite : primaryColor,
-          title: Text(
-            title,
-            style: TextStyle(
-              color: (primaryColor == null) ? Constants.colorBlue : Constants.colorWhite,
-            ),
-          ),
+          backgroundColor: Theme.of(context).backgroundColor,
+
+          // Title
+          title: Text(title, style: Theme.of(context).textTheme.title),
+
+          // Tabs
           bottom: TabBar(
+            // Style
             indicatorWeight: 4.0,
             indicatorPadding: EdgeInsets.symmetric(horizontal: 5.0),
-            unselectedLabelColor: (primaryColor == null)
-                ? Constants.colorBlue.withAlpha(Constants.alpha)
-                : Constants.colorWhite.withAlpha(Constants.alpha),
+            labelColor: Theme.of(context).primaryColor,
+            indicatorColor: Theme.of(context).primaryColor,
+
+            // Tabs
             tabs: tabs,
-            labelColor: (primaryColor == null) ? Constants.colorBlue : Constants.colorWhite,
-            indicatorColor: (primaryColor == null) ? Constants.colorBlue : Constants.colorWhite,
           ),
         ),
         body: TabBarView(

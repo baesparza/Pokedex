@@ -11,9 +11,12 @@ class Number extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String n = number.toString();
-    return Text(
-      '#' + '0' * (3 - n.length) + n,
-      style: Theme.of(context).textTheme.headline,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Text(
+        '#' + '0' * (3 - n.length) + n,
+        style: Theme.of(context).textTheme.headline,
+      ),
     );
   }
 }

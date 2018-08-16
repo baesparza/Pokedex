@@ -16,9 +16,17 @@ class Detail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: primaryColor,
-        title: Text(title),
         titleSpacing: 0.0,
+        backgroundColor: primaryColor,
+
+        // title
+        title: Text(
+          title,
+          style: Theme.of(context).primaryTextTheme.title,
+        ),
+
+        // icon
+        iconTheme: Theme.of(context).primaryIconTheme,
       ),
       body: child,
     );

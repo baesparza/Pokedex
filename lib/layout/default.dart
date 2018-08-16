@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class Default extends StatelessWidget {
   final Widget child;
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   Default({
     Key key,
@@ -11,53 +10,57 @@ class Default extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Scaffold(
-        key: _scaffoldKey,
-        backgroundColor: Colors.white,
-        appBar: _buildNavbar(context),
-        body: child,
-      ),
-    );
-  }
+    return Scaffold(
+      // style scafold
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
 
-  AppBar _buildNavbar(BuildContext context) {
-    return AppBar(
-      backgroundColor: Theme.of(context).backgroundColor,
-      titleSpacing: 0.0,
+      // Navbar
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).backgroundColor,
+        titleSpacing: 0.0,
 
-      /// Pokeball Icon
-      leading: Material(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Image.asset('assets/img/logo.png'),
+        // Pokeball Icon
+        leading: Material(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset('assets/img/logo.png'),
+          ),
         ),
-      ),
 
-      /// title
-      title: Text(
-        'Pokedex',
-        style: Theme.of(context).textTheme.title,
-      ),
+        // title
+        title: Text(
+          'Pokedex',
+          style: Theme.of(context).textTheme.title,
+        ),
 
-      /// Action buttons
-      actions: <Widget>[
-        _buildIconButton('assets/img/ranking.png', () {
-          Navigator.pushNamed(context, '/ranking');
-        }),
-        _buildIconButton('assets/img/egg.png', () {
-          Navigator.pushNamed(context, '/eggs');
-        }),
-        _buildIconButton('assets/img/search.png', () {}),
-      ],
+        // Action buttons
+        actions: <Widget>[
+          _buildImageButton(
+              path: 'assets/img/ranking.png',
+              onPressed: () {
+                Navigator.pushNamed(context, '/ranking');
+              }),
+          _buildImageButton(
+              path: 'assets/img/egg.png',
+              onPressed: () {
+                Navigator.pushNamed(context, '/eggs');
+              }),
+          _buildImageButton(path: 'assets/img/search.png', onPressed: () {}),
+        ],
+      ),
+      body: child,
     );
   }
 
-  Widget _buildIconButton(String path, Function fn) {
+  /// Build A material icon with an image
+  Widget _buildImageButton({
+    @required String path,
+    @required Function onPressed,
+  }) {
     return MaterialButton(
       minWidth: 0.0,
       child: Image.asset(path),
-      onPressed: fn,
+      onPressed: onPressed,
     );
   }
 }
