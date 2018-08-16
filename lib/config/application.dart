@@ -14,8 +14,14 @@ class Application {
       brightness: Brightness.light,
       primaryColor: Constants.colorBlue,
       fontFamily: 'Roboto',
+      backgroundColor: Constants.colorWhite,
+      scaffoldBackgroundColor: Constants.colorWhite,
       textTheme: TextTheme(
-        title: TextStyle(color: Colors.green),
+        title: TextStyle(
+          color: Constants.colorBlue,
+          fontWeight: FontWeight.w500,
+          fontSize: 23.0,
+        ),
         body1: TextStyle(color: Colors.green),
         body2: TextStyle(color: Colors.green),
         button: TextStyle(color: Colors.green),

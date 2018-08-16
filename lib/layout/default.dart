@@ -25,23 +25,24 @@ class Default extends StatelessWidget {
 
   AppBar _buildNavbar(BuildContext context) {
     return AppBar(
-      iconTheme: IconThemeData(color: Constants.colorBlue),
-      backgroundColor: Constants.colorWhite,
+      backgroundColor: Theme.of(context).backgroundColor,
       titleSpacing: 0.0,
+
+      /// Pokeball Icon
       leading: Material(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Image.asset('assets/img/logo.png'),
         ),
       ),
+
+      /// title
       title: Text(
         'Pokedex',
-        style: TextStyle(
-          color: Constants.colorBlue,
-          fontWeight: FontWeight.w500,
-          fontSize: 23.0,
-        ),
+        style: Theme.of(context).textTheme.title,
       ),
+
+      /// Action buttons
       actions: <Widget>[
         _buildIconButton('assets/img/ranking.png', () {
           Navigator.pushNamed(context, '/ranking');
@@ -56,7 +57,7 @@ class Default extends StatelessWidget {
 
   Widget _buildIconButton(String path, Function fn) {
     return MaterialButton(
-      minWidth: 10.0,
+      minWidth: 0.0,
       child: Image.asset(path),
       onPressed: fn,
     );
