@@ -72,7 +72,7 @@ class InfoStats extends StatelessWidget {
                 RichText(
                   text: TextSpan(
                     style: TextStyle(
-                      color: Constants.colorBlack,
+                      color: Constants.colorBlue,
                     ),
                     children: <TextSpan>[
                       TextSpan(text: value.toString()),

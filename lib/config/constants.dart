@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 class Constants {
   /// App Colors
-  static const Color colorRed = Colors.red;
   static const Color colorBlue = Color(0xff4d6478);
-  static const Color colorBlack = Color(0xff2A3C4B);
   static const Color colorWhite = Color(0xfffefefe);
   static const Color colorGrey = Color(0xffa6b0b6);
+
+  /// Static alpha value with alpha
+  static const int alpha = 180;
 
   /// Types Colors
   static const Color colorNormal = Color(0xff6f6f6f);

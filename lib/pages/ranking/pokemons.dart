@@ -68,25 +68,47 @@ class Pokemons extends StatelessWidget {
 
           /// Ranking
           Container(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              children: <Widget>[
-                Text(
-                  '#${index + 1}',
+              padding: const EdgeInsets.all(16.0),
+              child: RichText(
+                textAlign: TextAlign.center,
+                text: TextSpan(
                   style: TextStyle(
-                    fontSize: 21.0,
+                    color: Constants.colorBlue.withAlpha(Constants.alpha),
+                    fontSize: 20.0,
                   ),
+                  children: <TextSpan>[
+                    TextSpan(text: '#'),
+                    TextSpan(
+                      text: '${index + 1}\n',
+                      style: TextStyle(
+                        color: Constants.colorBlue,
+                      ),
+                    ),
+                    TextSpan(
+                      text: '${pokemon[param]} $smallParam',
+                      style: TextStyle(fontSize: 18.0),
+                    ),
+                  ],
                 ),
-                Text(
-                  '${pokemon[param]} $smallParam',
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    color: Constants.colorGrey,
-                  ),
-                ),
-              ],
-            ),
-          ),
+              )
+              // Column(
+              //   children: <Widget>[
+              //     Text(
+              //       '#${index + 1}',
+              //       style: TextStyle(
+              //         fontSize: 21.0,
+              //       ),
+              //     ),
+              //     Text(
+              //       ,
+              //       style: TextStyle(
+              //         fontSize: 18.0,
+              //         color: Constants.colorGrey,
+              //       ),
+              //     ),
+              //   ],
+              // ),
+              ),
 
           /// end wid
         ],

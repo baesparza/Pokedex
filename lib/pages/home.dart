@@ -2,16 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:pokedex/layout/default.dart';
 import 'package:pokedex/db/pokemons.dart';
+import 'package:pokedex/widgets/number.dart';
 
-class Home extends StatefulWidget {
+class Home extends StatelessWidget {
   final List<Map<String, dynamic>> pokemons = Pokemons.pokemons();
-  @override
-  HomeState createState() {
-    return HomeState();
-  }
-}
 
-class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Default(
@@ -20,7 +15,7 @@ class HomeState extends State<Home> {
           Expanded(
             child: GridView.builder(
               itemBuilder: _buildGridPokemons,
-              itemCount: widget.pokemons.length,
+              itemCount: pokemons.length,
               primary: false,
               padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -34,10 +29,7 @@ class HomeState extends State<Home> {
   }
 
   Widget _buildGridPokemons(BuildContext context, int index) {
-    // logic
-    String n = '${index+1}';
-    String id = '#' + '0' * (3 - n.length) + n;
-    // draw card
+    Map<String, dynamic> pokemon = pokemons[index];
     return MaterialButton(
       onPressed: () {
         Navigator.pushNamed(context, '/pokemon/$index');
@@ -49,21 +41,22 @@ class HomeState extends State<Home> {
           padding: const EdgeInsets.all(2.0),
           child: Column(
             children: <Widget>[
+              /// Image
               Expanded(
                 child: Image.network(
-                    'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F$n.png?alt=media'),
+                    'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F${pokemon['number']}.png?alt=media'),
               ),
+
+              /// Pokemon name
               Text(
-                widget.pokemons[index]['name'],
-                style: TextStyle(fontWeight: FontWeight.w500),
+                pokemons[index]['name'],
+                style: TextStyle(fontWeight: FontWeight.w500,),
               ),
-              Text(
-                id,
-                style: TextStyle(
-                  fontSize: 13.0,
-                  fontWeight: FontWeight.w300,
-                ),
-              ),
+
+              /// Pokemon number
+              Number(pokemon['number']),
+
+              /// end Card
             ],
           ),
         ),

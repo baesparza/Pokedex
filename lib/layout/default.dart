@@ -25,7 +25,7 @@ class Default extends StatelessWidget {
 
   AppBar _buildNavbar(BuildContext context) {
     return AppBar(
-      iconTheme: IconThemeData(color: Constants.colorBlack),
+      iconTheme: IconThemeData(color: Constants.colorBlue),
       backgroundColor: Constants.colorWhite,
       titleSpacing: 0.0,
       leading: Material(
@@ -37,7 +37,7 @@ class Default extends StatelessWidget {
       title: Text(
         'Pokedex',
         style: TextStyle(
-          color: Constants.colorBlack,
+          color: Constants.colorBlue,
           fontWeight: FontWeight.w500,
           fontSize: 23.0,
         ),

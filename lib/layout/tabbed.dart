@@ -32,14 +32,15 @@ class Tabbed extends StatelessWidget {
           title: Text(
             title,
             style: TextStyle(
-              color: (primaryColor == null) ? Constants.colorBlack : Constants.colorWhite,
+              color: (primaryColor == null) ? Constants.colorBlue : Constants.colorWhite,
             ),
           ),
           bottom: TabBar(
             indicatorWeight: 4.0,
             indicatorPadding: EdgeInsets.symmetric(horizontal: 5.0),
-            unselectedLabelColor:
-                (primaryColor == null) ? Constants.colorBlack.withAlpha(150) : Constants.colorWhite.withAlpha(175),
+            unselectedLabelColor: (primaryColor == null)
+                ? Constants.colorBlue.withAlpha(Constants.alpha)
+                : Constants.colorWhite.withAlpha(Constants.alpha),
             tabs: tabs,
             labelColor: (primaryColor == null) ? Constants.colorBlue : Constants.colorWhite,
             indicatorColor: (primaryColor == null) ? Constants.colorBlue : Constants.colorWhite,
