@@ -34,6 +34,7 @@ class Application {
         display1: TextStyle(
           fontSize: 21.0,
           fontWeight: FontWeight.w600,
+          color: Constants.colorBlue,
         ),
         body1: TextStyle(color: Colors.green),
         headline: TextStyle(

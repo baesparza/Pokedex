@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:pokedex/db/eggs.dart';
+import 'package:pokedex/widgets/number.dart';
 
 class Pokemons extends StatelessWidget {
   Pokemons({
@@ -31,7 +32,6 @@ class Pokemons extends StatelessWidget {
 
   Widget _buidlPokemon(BuildContext context, int index) {
     Map<String, dynamic> pokemon = pokemons[index];
-    String number = '${pokemon['number']}';
     return MaterialButton(
       padding: EdgeInsets.symmetric(horizontal: 20.0),
       child: Row(
@@ -40,7 +40,7 @@ class Pokemons extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 10.0),
             child: Image.network(
-                'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F${number}.png?alt=media'),
+                'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F${pokemon['number']}.png?alt=media'),
           ),
 
           /// Description
@@ -48,18 +48,10 @@ class Pokemons extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(
-                  '#' + '0' * (3 - number.length) + number,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
+                Number(pokemon['number']),
                 Text(
                   pokemon['name'],
-                  style: TextStyle(
-                    fontSize: 21.0,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: Theme.of(context).textTheme.display1,
                 ),
               ],
             ),
@@ -70,12 +62,13 @@ class Pokemons extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: <Widget>[
-                Image.asset('assets/img/egg.png'),
+                Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset('assets/img/egg.png'),
+                ),
                 Text(
                   '${pokemon['eggDistance']} km',
-                  style: TextStyle(
-                    fontSize: 18.0,
-                  ),
+                  style: Theme.of(context).textTheme.body2,
                 ),
               ],
             ),
