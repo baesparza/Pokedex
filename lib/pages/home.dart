@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:pokedex/layouts/default.dart';
 import 'package:pokedex/db/json-pokemons.dart';
 import 'package:pokedex/models/pokemon.dart';
+import 'package:pokedex/widgets/pokemon-asset.dart';
 
 class Home extends StatelessWidget {
   final List<Pokemon> pokemons = JSONPokemons.pokemons();
@@ -42,8 +43,7 @@ class Home extends StatelessWidget {
         children: <Widget>[
           /// Image
           Expanded(
-            child: Image.network(
-                'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F${pokemon.number}.png?alt=media'),
+            child: PokemonAsset(number: pokemon.number),
           ),
 
           /// Pokemon name

@@ -14,12 +14,8 @@ class Ranking extends StatelessWidget {
         'HP',
       ],
       children: <Widget>[
-        PokemonsTab(
-          sortByHP: false,
-        ),
-        PokemonsTab(
-          sortByHP: true,
-        ),
+        PokemonsTab(sortByHP: false),
+        PokemonsTab(sortByHP: true),
       ],
     );
   }

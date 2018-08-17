@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:pokedex/widgets/number.dart';
+import 'package:pokedex/widgets/pokemon-asset.dart';
 import 'package:pokedex/widgets/pokemon/poke-types.dart';
 
 class InfoHeader extends StatelessWidget {
@@ -20,8 +21,7 @@ class InfoHeader extends StatelessWidget {
         // pokemon sprite
         Container(
           margin: const EdgeInsets.all(5.0),
-          child: Image.network(
-              'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F$number.png?alt=media'),
+          child: PokemonAsset(number: number),
         ),
 
         // pokemon number, type
