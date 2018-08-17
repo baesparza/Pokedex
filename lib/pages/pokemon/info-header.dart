@@ -19,7 +19,7 @@ class InfoHeader extends StatelessWidget {
       children: <Widget>[
         // pokemon sprite
         Container(
-          margin: const EdgeInsets.all(10.0),
+          margin: const EdgeInsets.all(5.0),
           child: Image.network(
               'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F$number.png?alt=media'),
         ),

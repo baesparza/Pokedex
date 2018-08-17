@@ -10,9 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: Application.debugShowCheckedModeBanner,
-      showPerformanceOverlay: Application.enablePerformanceOverlay,
-      checkerboardRasterCacheImages: Application.checkerboardRasterCacheImages,
+      debugShowCheckedModeBanner: false,
       title: 'Pokedex',
       theme: Application.appTheme(),
       routes: Router.appRoutes(),

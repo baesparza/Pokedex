@@ -17,7 +17,6 @@ class Home extends StatelessWidget {
               itemBuilder: _buildGridPokemons,
               itemCount: pokemons.length,
               primary: false,
-              padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: (MediaQuery.of(context).orientation == Orientation.landscape) ? 5 : 3,
               ),
@@ -52,11 +51,6 @@ class Home extends StatelessWidget {
             pokemons[index]['name'],
             style: Theme.of(context).textTheme.subhead,
           ),
-
-          /// Pokemon number
-          Number(pokemon['number']),
-
-          /// end Card
         ],
       ),
     );

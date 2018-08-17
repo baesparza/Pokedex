@@ -19,7 +19,7 @@ class Pokemon extends StatelessWidget {
       primaryColor: color,
       title: res['name'],
       child: ListView(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 10.0),
         children: <Widget>[
           InfoHeader(
             number: res['number'],
