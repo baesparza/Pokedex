@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:pokedex/layouts/default.dart';
-import 'package:pokedex/db/pokemons.dart';
+import 'package:pokedex/db/json-pokemons.dart';
 
 class Home extends StatelessWidget {
-  final List<Map<String, dynamic>> pokemons = Pokemons.pokemons();
+  final List<Map<String, dynamic>> pokemons = JSONPokemons.pokemons();
 
   @override
   Widget build(BuildContext context) {

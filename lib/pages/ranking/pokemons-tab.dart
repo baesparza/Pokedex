@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/db/pokemons.dart' as db;
+import 'package:pokedex/db/json-pokemons.dart';
 import 'package:pokedex/widgets/number.dart';
 
 class PokemonsTab extends StatelessWidget {
@@ -17,7 +17,7 @@ class PokemonsTab extends StatelessWidget {
     });
   }
 
-  List<Map<String, dynamic>> pokemons = db.Pokemons.pokemons();
+  List<Map<String, dynamic>> pokemons = JSONPokemons.pokemons();
   String param, smallParam;
 
   @override

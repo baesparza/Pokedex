@@ -1,4 +1,4 @@
-class Eggs {
+class JSONEggs {
   static List<Map<String, dynamic>> eggs() => [
     {"number": 1, "name": "Bulbasaur", "eggDistance": 2},
     {"number": 4, "name": "Charmander", "eggDistance": 2},

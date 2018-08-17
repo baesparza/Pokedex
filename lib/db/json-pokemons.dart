@@ -1,4 +1,4 @@
-class Pokemons {
+class JSONPokemons {
   static List<Map<String, dynamic>> pokemons() => [
         {
           "colorHex": 0xff399494,

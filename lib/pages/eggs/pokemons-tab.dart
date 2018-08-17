@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/db/eggs.dart';
+import 'package:pokedex/db/json-eggs.dart';
 import 'package:pokedex/widgets/number.dart';
 
 class PokemonsTab extends StatelessWidget {
@@ -8,7 +8,7 @@ class PokemonsTab extends StatelessWidget {
     Key key,
     @required int distance,
   }) : super(key: key) {
-    pokemons = Eggs.eggs();
+    pokemons = JSONEggs.eggs();
     if (distance == 0) {
       return;
     }

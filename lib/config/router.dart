@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:pokedex/pages/home.dart';
 import 'package:pokedex/pages/pokemon/pokemon-details.dart';
 import 'package:pokedex/pages/eggs/eggs.dart';
-import 'package:pokedex/db/pokemons.dart';
+import 'package:pokedex/db/json-pokemons.dart';
 import 'package:pokedex/pages/ranking/ranking.dart';
 
 class Router {
@@ -21,7 +21,7 @@ class Router {
     if (path[0].isNotEmpty) return null;
 
     if (path[1] == 'pokemon') {
-      List<Map<String, dynamic>> pokes = Pokemons.pokemons();
+      List<Map<String, dynamic>> pokes = JSONPokemons.pokemons();
       return MaterialPageRoute(builder: (BuildContext context) {
         return PokemonDetails(pokes[int.parse(path[2])]);
       });
