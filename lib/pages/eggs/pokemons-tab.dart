@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/db/pokemons.dart' as db;
+import 'package:pokedex/db/eggs.dart';
 import 'package:pokedex/widgets/number.dart';
 
-class Pokemons extends StatelessWidget {
-  Pokemons({
+class PokemonsTab extends StatelessWidget {
+  PokemonsTab({
     Key key,
-    @required bool sortByHP,
+    @required int distance,
   }) : super(key: key) {
-    param = (sortByHP) ? 'maxHP' : 'maxCP';
-    smallParam = (sortByHP) ? 'HP' : 'CP';
-
-    /// sort Pokemons by param
-    pokemons.sort((Map<String, dynamic> a, Map<String, dynamic> b) {
-      return a[param] >= b[param] ? -1 : 1;
+    pokemons = Eggs.eggs();
+    if (distance == 0) {
+      return;
+    }
+    // use var distance as a filter
+    pokemons.retainWhere((Map<String, dynamic> pokemon) {
+      return pokemon['eggDistance'] == distance;
     });
   }
 
-  List<Map<String, dynamic>> pokemons = db.Pokemons.pokemons();
-  String param, smallParam;
+  List<Map<String, dynamic>> pokemons;
 
   @override
   Widget build(BuildContext context) {
@@ -58,26 +58,22 @@ class Pokemons extends StatelessWidget {
             ),
           ),
 
-          /// Ranking
+          /// Egg icon
           Container(
             padding: const EdgeInsets.all(16.0),
-            child: RichText(
-              textAlign: TextAlign.center,
-              text: TextSpan(
-                style: Theme.of(context).textTheme.caption,
-                children: <TextSpan>[
-                  TextSpan(text: '#'),
-                  TextSpan(
-                    text: '${index + 1}\n',
-                    style: Theme.of(context).textTheme.display2,
-                  ),
-                  TextSpan(text: '${pokemon[param]} $smallParam'),
-                ],
-              ),
+            child: Column(
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset('assets/img/egg.png'),
+                ),
+                Text(
+                  '${pokemon['eggDistance']} km',
+                  style: Theme.of(context).textTheme.caption,
+                ),
+              ],
             ),
           ),
-
-          /// end wid
         ],
       ),
 

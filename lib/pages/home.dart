@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/layout/default.dart';
+import 'package:pokedex/layouts/default.dart';
 import 'package:pokedex/db/pokemons.dart';
-import 'package:pokedex/widgets/number.dart';
 
 class Home extends StatelessWidget {
   final List<Map<String, dynamic>> pokemons = Pokemons.pokemons();

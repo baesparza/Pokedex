@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/layout/detail.dart';
+import 'package:pokedex/layouts/detail.dart';
 import 'package:pokedex/pages/pokemon/info-stats.dart';
 import 'package:pokedex/pages/pokemon/info-meta.dart';
 import 'package:pokedex/pages/pokemon/info-header.dart';
 import 'package:pokedex/widgets/pokemon/poke-types.dart';
 import 'package:pokedex/widgets/pokemon/section.dart';
 
-class Pokemon extends StatelessWidget {
+class PokemonDetails extends StatelessWidget {
   final Map<String, dynamic> res;
 
-  Pokemon(this.res);
+  PokemonDetails(this.res);
 
   @override
   Widget build(BuildContext context) {
-    Color color = Color(int.parse('0xff' + res['colorHex'].substring(1)));
     return Detail(
-      primaryColor: color,
+      primaryColor: Color(res['colorHex']),
       title: res['name'],
       child: ListView(
         padding: const EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 10.0),
@@ -44,7 +43,7 @@ class Pokemon extends StatelessWidget {
 
           // Stats Section
           InfoStats(
-            color: color,
+            color: Color(res['colorHex']),
             attack: res['attack'],
             defense: res['defense'],
             maxCP: res['maxCP'],

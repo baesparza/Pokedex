@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/layout/tabbed.dart';
-import 'package:pokedex/pages/eggs/pokemons.dart';
+import 'package:pokedex/layouts/tabbed.dart';
+import 'package:pokedex/pages/eggs/pokemons-tab.dart';
 
 class Eggs extends StatelessWidget {
   @override
@@ -16,10 +16,10 @@ class Eggs extends StatelessWidget {
         '10 km',
       ],
       children: <Widget>[
-        Pokemons(distance: 0),
-        Pokemons(distance: 2),
-        Pokemons(distance: 5),
-        Pokemons(distance: 10),
+        PokemonsTab(distance: 0),
+        PokemonsTab(distance: 2),
+        PokemonsTab(distance: 5),
+        PokemonsTab(distance: 10),
       ],
     );
   }

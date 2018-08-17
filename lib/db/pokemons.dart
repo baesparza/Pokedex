@@ -1,7 +1,7 @@
 class Pokemons {
   static List<Map<String, dynamic>> pokemons() => [
         {
-          "colorHex": "#399494",
+          "colorHex": 0xff399494,
           "types": ["grass", "poison"],
           "strengths": ["water", "fairy"],
           "weaknesses": ["fire", "flying", "ice", "psychic"],
@@ -25,7 +25,7 @@ class Pokemons {
           "involution": 1
         },
         {
-          "colorHex": "#399494",
+          "colorHex": 0xff399494,
           "types": ["grass", "poison"],
           "strengths": ["water", "fairy"],
           "weaknesses": ["fire", "flying", "ice", "psychic"],
@@ -49,7 +49,7 @@ class Pokemons {
           "involution": 1
         },
         {
-          "colorHex": "#399494",
+          "colorHex": 0xff399494,
           "types": ["grass", "poison"],
           "strengths": ["water", "fairy"],
           "weaknesses": ["fire", "flying", "ice", "psychic"],
@@ -71,7 +71,7 @@ class Pokemons {
           "involution": 1
         },
         {
-          "colorHex": "#FF9441",
+          "colorHex": 0xffFF9441,
           "types": ["fire"],
           "strengths": ["bug", "steel", "grass", "ice"],
           "weaknesses": ["ground", "rock", "water"],
@@ -95,7 +95,7 @@ class Pokemons {
           "involution": 4
         },
         {
-          "colorHex": "#CD3939",
+          "colorHex": 0xffCD3939,
           "types": ["fire"],
           "strengths": ["bug", "steel", "grass", "ice"],
           "weaknesses": ["ground", "rock", "water"],
@@ -119,7 +119,7 @@ class Pokemons {
           "involution": 4
         },
         {
-          "colorHex": "#FF9441",
+          "colorHex": 0xffFF9441,
           "types": ["fire", "flying"],
           "strengths": ["bug", "fighting", "grass", "ice"],
           "weaknesses": ["rock", "electric", "water"],
@@ -141,7 +141,7 @@ class Pokemons {
           "involution": 4
         },
         {
-          "colorHex": "#5596AF",
+          "colorHex": 0xff5596AF,
           "types": ["water"],
           "strengths": ["rock", "ground", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -165,7 +165,7 @@ class Pokemons {
           "involution": 7
         },
         {
-          "colorHex": "#627BC5",
+          "colorHex": 0xff627BC5,
           "types": ["water"],
           "strengths": ["rock", "ground", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -189,7 +189,7 @@ class Pokemons {
           "involution": 7
         },
         {
-          "colorHex": "#2062AC",
+          "colorHex": 0xff2062AC,
           "types": ["water"],
           "strengths": ["rock", "ground", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -211,7 +211,7 @@ class Pokemons {
           "involution": 7
         },
         {
-          "colorHex": "#76A839",
+          "colorHex": 0xff76A839,
           "types": ["bug"],
           "strengths": ["grass", "psychic", "dark"],
           "weaknesses": ["fire", "flying", "rock"],
@@ -235,7 +235,7 @@ class Pokemons {
           "involution": 10
         },
         {
-          "colorHex": "#76A839",
+          "colorHex": 0xff76A839,
           "types": ["bug"],
           "strengths": ["grass", "psychic", "dark"],
           "weaknesses": ["fire", "flying", "rock"],
@@ -259,7 +259,7 @@ class Pokemons {
           "involution": 10
         },
         {
-          "colorHex": "#4B4368",
+          "colorHex": 0xff4B4368,
           "types": ["bug", "flying"],
           "strengths": ["bug", "grass", "psychic", "dark"],
           "weaknesses": ["rock", "electric", "fire", "flying", "ice"],
@@ -281,7 +281,7 @@ class Pokemons {
           "involution": 10
         },
         {
-          "colorHex": "#BD9452",
+          "colorHex": 0xffBD9452,
           "types": ["bug", "poison"],
           "strengths": ["grass", "psychic", "dark"],
           "weaknesses": ["fire", "flying", "psychic", "rock"],
@@ -305,7 +305,7 @@ class Pokemons {
           "involution": 13
         },
         {
-          "colorHex": "#FFCD4A",
+          "colorHex": 0xffFFCD4A,
           "types": ["bug", "poison"],
           "strengths": ["grass", "psychic", "dark"],
           "weaknesses": ["fire", "flying", "psychic", "rock"],
@@ -329,7 +329,7 @@ class Pokemons {
           "involution": 13
         },
         {
-          "colorHex": "#FFCD4A",
+          "colorHex": 0xffFFCD4A,
           "types": ["bug", "poison"],
           "strengths": ["grass", "psychic", "dark"],
           "weaknesses": ["fire", "flying", "psychic", "rock"],
@@ -351,7 +351,7 @@ class Pokemons {
           "involution": 13
         },
         {
-          "colorHex": "#A4625A",
+          "colorHex": 0xffA4625A,
           "types": ["normal", "flying"],
           "strengths": ["fighting", "bug", "grass"],
           "weaknesses": ["electric", "ice", "rock"],
@@ -375,7 +375,7 @@ class Pokemons {
           "involution": 16
         },
         {
-          "colorHex": "#C53129",
+          "colorHex": 0xffC53129,
           "types": ["normal", "flying"],
           "strengths": ["fighting", "bug", "grass"],
           "weaknesses": ["electric", "ice", "rock"],
@@ -399,7 +399,7 @@ class Pokemons {
           "involution": 16
         },
         {
-          "colorHex": "#C53129",
+          "colorHex": 0xffC53129,
           "types": ["normal", "flying"],
           "strengths": ["fighting", "bug", "grass"],
           "weaknesses": ["electric", "ice", "rock"],
@@ -421,7 +421,7 @@ class Pokemons {
           "involution": 16
         },
         {
-          "colorHex": "#9C73A4",
+          "colorHex": 0xff9C73A4,
           "types": ["normal"],
           "strengths": [],
           "weaknesses": ["fighting"],
@@ -445,7 +445,7 @@ class Pokemons {
           "involution": 19
         },
         {
-          "colorHex": "#947B52",
+          "colorHex": 0xff947B52,
           "types": ["normal"],
           "strengths": [],
           "weaknesses": ["fighting"],
@@ -467,7 +467,7 @@ class Pokemons {
           "involution": 19
         },
         {
-          "colorHex": "#A46A6A",
+          "colorHex": 0xffA46A6A,
           "types": ["normal", "flying"],
           "strengths": ["fighting", "bug", "grass"],
           "weaknesses": ["electric", "ice", "rock"],
@@ -491,7 +491,7 @@ class Pokemons {
           "involution": 21
         },
         {
-          "colorHex": "#7B6262",
+          "colorHex": 0xff7B6262,
           "types": ["normal", "flying"],
           "strengths": ["fighting", "bug", "grass"],
           "weaknesses": ["electric", "ice", "rock"],
@@ -513,7 +513,7 @@ class Pokemons {
           "involution": 21
         },
         {
-          "colorHex": "#7B527B",
+          "colorHex": 0xff7B527B,
           "types": ["poison"],
           "strengths": ["grass", "fairy"],
           "weaknesses": ["ground", "psychic"],
@@ -537,7 +537,7 @@ class Pokemons {
           "involution": 23
         },
         {
-          "colorHex": "#837B94",
+          "colorHex": 0xff837B94,
           "types": ["poison"],
           "strengths": ["grass", "fairy"],
           "weaknesses": ["ground", "psychic"],
@@ -559,7 +559,7 @@ class Pokemons {
           "involution": 23
         },
         {
-          "colorHex": "#F6BD20",
+          "colorHex": 0xffF6BD20,
           "types": ["electric"],
           "strengths": ["flying", "water"],
           "weaknesses": ["ground"],
@@ -583,7 +583,7 @@ class Pokemons {
           "involution": 25
         },
         {
-          "colorHex": "#F6AC29",
+          "colorHex": 0xffF6AC29,
           "types": ["electric"],
           "strengths": ["flying", "water"],
           "weaknesses": ["ground"],
@@ -605,7 +605,7 @@ class Pokemons {
           "involution": 25
         },
         {
-          "colorHex": "#AC9C62",
+          "colorHex": 0xffAC9C62,
           "types": ["ground"],
           "strengths": ["poison", "rock", "steel", "fire", "electric"],
           "weaknesses": ["grass", "ice", "water"],
@@ -629,7 +629,7 @@ class Pokemons {
           "involution": 27
         },
         {
-          "colorHex": "#AC944A",
+          "colorHex": 0xffAC944A,
           "types": ["ground"],
           "strengths": ["poison", "rock", "steel", "fire", "electric"],
           "weaknesses": ["grass", "ice", "water"],
@@ -651,7 +651,7 @@ class Pokemons {
           "involution": 27
         },
         {
-          "colorHex": "#8383AC",
+          "colorHex": 0xff8383AC,
           "types": ["poison"],
           "strengths": ["grass", "fairy"],
           "weaknesses": ["ground", "psychic"],
@@ -675,7 +675,7 @@ class Pokemons {
           "involution": 29
         },
         {
-          "colorHex": "#62839C",
+          "colorHex": 0xff62839C,
           "types": ["poison"],
           "strengths": ["grass", "fairy"],
           "weaknesses": ["ground", "psychic"],
@@ -699,7 +699,7 @@ class Pokemons {
           "involution": 29
         },
         {
-          "colorHex": "#527BA4",
+          "colorHex": 0xff527BA4,
           "types": ["poison", "ground"],
           "strengths": ["fire", "electric", "fairy"],
           "weaknesses": ["ground", "ice", "psychic", "water"],
@@ -721,7 +721,7 @@ class Pokemons {
           "involution": 29
         },
         {
-          "colorHex": "#8B5A8B",
+          "colorHex": 0xff8B5A8B,
           "types": ["poison"],
           "strengths": ["grass", "fairy"],
           "weaknesses": ["ground", "psychic"],
@@ -745,7 +745,7 @@ class Pokemons {
           "involution": 32
         },
         {
-          "colorHex": "#946A94",
+          "colorHex": 0xff946A94,
           "types": ["poison"],
           "strengths": ["grass", "fairy"],
           "weaknesses": ["ground", "psychic"],
@@ -769,7 +769,7 @@ class Pokemons {
           "involution": 32
         },
         {
-          "colorHex": "#A46A9C",
+          "colorHex": 0xffA46A9C,
           "types": ["poison", "ground"],
           "strengths": ["fire", "electric", "fairy"],
           "weaknesses": ["ground", "ice", "psychic", "water"],
@@ -791,7 +791,7 @@ class Pokemons {
           "involution": 32
         },
         {
-          "colorHex": "#FFACAC",
+          "colorHex": 0xffFFACAC,
           "types": ["fairy"],
           "strengths": ["fighting", "dragon", "dark"],
           "weaknesses": ["steel", "poison"],
@@ -815,7 +815,7 @@ class Pokemons {
           "involution": 35
         },
         {
-          "colorHex": "#EE9494",
+          "colorHex": 0xffEE9494,
           "types": ["fairy"],
           "strengths": ["fighting", "dragon", "dark"],
           "weaknesses": ["steel", "poison"],
@@ -837,7 +837,7 @@ class Pokemons {
           "involution": 35
         },
         {
-          "colorHex": "#bc7b5b",
+          "colorHex": 0xffbc7b5b,
           "types": ["fire"],
           "strengths": ["bug", "steel", "grass", "ice"],
           "weaknesses": ["ground", "rock", "water"],
@@ -861,7 +861,7 @@ class Pokemons {
           "involution": 37
         },
         {
-          "colorHex": "#8B8352",
+          "colorHex": 0xff8B8352,
           "types": ["fire"],
           "strengths": ["bug", "steel", "grass", "ice"],
           "weaknesses": ["ground", "rock", "water"],
@@ -883,7 +883,7 @@ class Pokemons {
           "involution": 37
         },
         {
-          "colorHex": "#f2cdd7",
+          "colorHex": 0xfff2cdd7,
           "types": ["normal", "fairy"],
           "strengths": ["fighting", "dragon", "dark"],
           "weaknesses": ["steel", "poison"],
@@ -907,7 +907,7 @@ class Pokemons {
           "involution": 39
         },
         {
-          "colorHex": "#F67B94",
+          "colorHex": 0xffF67B94,
           "types": ["normal", "fairy"],
           "strengths": ["fighting", "dragon", "dark"],
           "weaknesses": ["steel", "poison"],
@@ -929,7 +929,7 @@ class Pokemons {
           "involution": 39
         },
         {
-          "colorHex": "#8B4A83",
+          "colorHex": 0xff8B4A83,
           "types": ["poison", "flying"],
           "strengths": ["fighting", "bug", "grass", "fairy"],
           "weaknesses": ["electric", "ice", "psychic", "rock"],
@@ -953,7 +953,7 @@ class Pokemons {
           "involution": 41
         },
         {
-          "colorHex": "#944A8B",
+          "colorHex": 0xff944A8B,
           "types": ["poison", "flying"],
           "strengths": ["fighting", "bug", "grass", "fairy"],
           "weaknesses": ["electric", "ice", "psychic", "rock"],
@@ -975,7 +975,7 @@ class Pokemons {
           "involution": 41
         },
         {
-          "colorHex": "#7BB45A",
+          "colorHex": 0xff7BB45A,
           "types": ["grass", "poison"],
           "strengths": ["water", "fairy"],
           "weaknesses": ["fire", "flying", "ice", "psychic"],
@@ -999,7 +999,7 @@ class Pokemons {
           "involution": 43
         },
         {
-          "colorHex": "#4A7394",
+          "colorHex": 0xff4A7394,
           "types": ["grass", "poison"],
           "strengths": ["water", "fairy"],
           "weaknesses": ["fire", "flying", "ice", "psychic"],
@@ -1023,7 +1023,7 @@ class Pokemons {
           "involution": 43
         },
         {
-          "colorHex": "#415A7B",
+          "colorHex": 0xff415A7B,
           "types": ["grass", "poison"],
           "strengths": ["water", "fairy"],
           "weaknesses": ["fire", "flying", "ice", "psychic"],
@@ -1045,7 +1045,7 @@ class Pokemons {
           "involution": 43
         },
         {
-          "colorHex": "#A4526A",
+          "colorHex": 0xffA4526A,
           "types": ["grass", "bug"],
           "strengths": ["rock", "ground", "water", "psychic", "dark"],
           "weaknesses": ["fire", "flying", "bug", "ice", "poison", "rock"],
@@ -1069,7 +1069,7 @@ class Pokemons {
           "involution": 46
         },
         {
-          "colorHex": "#9C4A6A",
+          "colorHex": 0xff9C4A6A,
           "types": ["grass", "bug"],
           "strengths": ["rock", "ground", "water", "psychic", "dark"],
           "weaknesses": ["fire", "flying", "bug", "ice", "poison", "rock"],
@@ -1091,7 +1091,7 @@ class Pokemons {
           "involution": 46
         },
         {
-          "colorHex": "#625A94",
+          "colorHex": 0xff625A94,
           "types": ["poison", "bug"],
           "strengths": ["grass", "psychic", "dark"],
           "weaknesses": ["fire", "flying", "psychic", "rock"],
@@ -1115,7 +1115,7 @@ class Pokemons {
           "involution": 48
         },
         {
-          "colorHex": "#736A8B",
+          "colorHex": 0xff736A8B,
           "types": ["poison", "bug"],
           "strengths": ["grass", "psychic", "dark"],
           "weaknesses": ["fire", "flying", "psychic", "rock"],
@@ -1137,7 +1137,7 @@ class Pokemons {
           "involution": 48
         },
         {
-          "colorHex": "#737373",
+          "colorHex": 0xff737373,
           "types": ["ground"],
           "strengths": ["poison", "rock", "steel", "fire", "electric"],
           "weaknesses": ["grass", "ice", "water"],
@@ -1161,7 +1161,7 @@ class Pokemons {
           "involution": 50
         },
         {
-          "colorHex": "#6A6A6A",
+          "colorHex": 0xff6A6A6A,
           "types": ["ground"],
           "strengths": ["poison", "rock", "steel", "fire", "electric"],
           "weaknesses": ["grass", "ice", "water"],
@@ -1183,7 +1183,7 @@ class Pokemons {
           "involution": 50
         },
         {
-          "colorHex": "#837373",
+          "colorHex": 0xff837373,
           "types": ["normal"],
           "strengths": [],
           "weaknesses": ["fighting"],
@@ -1207,7 +1207,7 @@ class Pokemons {
           "involution": 52
         },
         {
-          "colorHex": "#9C8B6A",
+          "colorHex": 0xff9C8B6A,
           "types": ["normal"],
           "strengths": [],
           "weaknesses": ["fighting"],
@@ -1229,7 +1229,7 @@ class Pokemons {
           "involution": 52
         },
         {
-          "colorHex": "#B49452",
+          "colorHex": 0xffB49452,
           "types": ["water"],
           "strengths": ["rock", "ground", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -1253,7 +1253,7 @@ class Pokemons {
           "involution": 54
         },
         {
-          "colorHex": "#4A739C",
+          "colorHex": 0xff4A739C,
           "types": ["water"],
           "strengths": ["rock", "ground", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -1275,7 +1275,7 @@ class Pokemons {
           "involution": 54
         },
         {
-          "colorHex": "#948B7B",
+          "colorHex": 0xff948B7B,
           "types": ["fighting"],
           "strengths": ["normal", "rock", "steel", "ice", "dark"],
           "weaknesses": ["flying", "psychic", "fairy"],
@@ -1299,7 +1299,7 @@ class Pokemons {
           "involution": 56
         },
         {
-          "colorHex": "#6A5A5A",
+          "colorHex": 0xff6A5A5A,
           "types": ["fighting"],
           "strengths": ["normal", "rock", "steel", "ice", "dark"],
           "weaknesses": ["flying", "psychic", "fairy"],
@@ -1321,7 +1321,7 @@ class Pokemons {
           "involution": 56
         },
         {
-          "colorHex": "#C55252",
+          "colorHex": 0xffC55252,
           "types": ["fire"],
           "strengths": ["bug", "grass", "steel", "ice"],
           "weaknesses": ["ground", "rock", "water"],
@@ -1345,7 +1345,7 @@ class Pokemons {
           "involution": 58
         },
         {
-          "colorHex": "#EE7331",
+          "colorHex": 0xffEE7331,
           "types": ["fire"],
           "strengths": ["bug", "grass", "steel", "ice"],
           "weaknesses": ["ground", "rock", "water"],
@@ -1367,7 +1367,7 @@ class Pokemons {
           "involution": 58
         },
         {
-          "colorHex": "#5A7BB4",
+          "colorHex": 0xff5A7BB4,
           "types": ["water"],
           "strengths": ["ground", "rock", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -1391,7 +1391,7 @@ class Pokemons {
           "involution": 60
         },
         {
-          "colorHex": "#527BB4",
+          "colorHex": 0xff527BB4,
           "types": ["water"],
           "strengths": ["ground", "rock", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -1415,7 +1415,7 @@ class Pokemons {
           "involution": 60
         },
         {
-          "colorHex": "#5A7BA4",
+          "colorHex": 0xff5A7BA4,
           "types": ["water", "fighting"],
           "strengths": ["normal", "rock", "ground", "steel", "fire", "ice", "dark"],
           "weaknesses": ["electric", "flying", "grass", "psychic", "fairy"],
@@ -1437,7 +1437,7 @@ class Pokemons {
           "involution": 60
         },
         {
-          "colorHex": "#BD9CE6",
+          "colorHex": 0xffBD9CE6,
           "types": ["psychic"],
           "strengths": ["fighting", "poison"],
           "weaknesses": ["bug", "dark", "ghost"],
@@ -1461,7 +1461,7 @@ class Pokemons {
           "involution": 63
         },
         {
-          "colorHex": "#BD9CE6",
+          "colorHex": 0xffBD9CE6,
           "types": ["psychic"],
           "strengths": ["fighting", "poison"],
           "weaknesses": ["bug", "dark", "ghost"],
@@ -1485,7 +1485,7 @@ class Pokemons {
           "involution": 63
         },
         {
-          "colorHex": "#BD9CE6",
+          "colorHex": 0xffBD9CE6,
           "types": ["psychic"],
           "strengths": ["fighting", "poison"],
           "weaknesses": ["bug", "dark", "ghost"],
@@ -1507,7 +1507,7 @@ class Pokemons {
           "involution": 63
         },
         {
-          "colorHex": "#7B8B94",
+          "colorHex": 0xff7B8B94,
           "types": ["fighting"],
           "strengths": ["normal", "rock", "steel", "ice", "dark"],
           "weaknesses": ["flying", "psychic", "fairy"],
@@ -1531,7 +1531,7 @@ class Pokemons {
           "involution": 66
         },
         {
-          "colorHex": "#83839C",
+          "colorHex": 0xff83839C,
           "types": ["fighting"],
           "strengths": ["normal", "rock", "steel", "ice", "dark"],
           "weaknesses": ["flying", "psychic", "fairy"],
@@ -1555,7 +1555,7 @@ class Pokemons {
           "involution": 66
         },
         {
-          "colorHex": "#737B8B",
+          "colorHex": 0xff737B8B,
           "types": ["fighting"],
           "strengths": ["normal", "rock", "steel", "ice", "dark"],
           "weaknesses": ["flying", "psychic", "fairy"],
@@ -1577,7 +1577,7 @@ class Pokemons {
           "involution": 66
         },
         {
-          "colorHex": "#73A46A",
+          "colorHex": 0xff73A46A,
           "types": ["grass", "poison"],
           "strengths": ["water", "fairy"],
           "weaknesses": ["fire", "flying", "ice", "psychic"],
@@ -1601,7 +1601,7 @@ class Pokemons {
           "involution": 69
         },
         {
-          "colorHex": "#73945A",
+          "colorHex": 0xff73945A,
           "types": ["grass", "poison"],
           "strengths": ["water", "fairy"],
           "weaknesses": ["fire", "flying", "ice", "psychic"],
@@ -1625,7 +1625,7 @@ class Pokemons {
           "involution": 69
         },
         {
-          "colorHex": "#5A9452",
+          "colorHex": 0xff5A9452,
           "types": ["grass", "poison"],
           "strengths": ["water", "fairy"],
           "weaknesses": ["fire", "flying", "ice", "psychic"],
@@ -1647,7 +1647,7 @@ class Pokemons {
           "involution": 69
         },
         {
-          "colorHex": "#4A83A4",
+          "colorHex": 0xff4A83A4,
           "types": ["water", "poison"],
           "strengths": ["fire", "fairy"],
           "weaknesses": ["electric", "ground", "psychic"],
@@ -1671,7 +1671,7 @@ class Pokemons {
           "involution": 72
         },
         {
-          "colorHex": "#7B7373",
+          "colorHex": 0xff7B7373,
           "types": ["water", "poison"],
           "strengths": ["fire", "fairy"],
           "weaknesses": ["electric", "ground", "psychic"],
@@ -1693,7 +1693,7 @@ class Pokemons {
           "involution": 72
         },
         {
-          "colorHex": "#7B7373",
+          "colorHex": 0xff7B7373,
           "types": ["rock", "ground"],
           "strengths": ["poison", "rock", "fire", "electric", "ice"],
           "weaknesses": ["grass", "water", "fighting", "ground", "ice", "steel"],
@@ -1717,7 +1717,7 @@ class Pokemons {
           "involution": 74
         },
         {
-          "colorHex": "#8B9483",
+          "colorHex": 0xff8B9483,
           "types": ["rock", "ground"],
           "strengths": ["poison", "rock", "fire", "electric", "ice"],
           "weaknesses": ["grass", "water", "fighting", "ground", "ice", "steel"],
@@ -1741,7 +1741,7 @@ class Pokemons {
           "involution": 74
         },
         {
-          "colorHex": "#5A5252",
+          "colorHex": 0xff5A5252,
           "types": ["rock", "ground"],
           "strengths": ["poison", "rock", "fire", "electric", "ice"],
           "weaknesses": ["grass", "water", "fighting", "ground", "ice", "steel"],
@@ -1763,7 +1763,7 @@ class Pokemons {
           "involution": 74
         },
         {
-          "colorHex": "#E65A29",
+          "colorHex": 0xffE65A29,
           "types": ["fire"],
           "strengths": ["bug", "steel", "grass", "ice"],
           "weaknesses": ["ground", "rock", "water"],
@@ -1787,7 +1787,7 @@ class Pokemons {
           "involution": 77
         },
         {
-          "colorHex": "#E65A29",
+          "colorHex": 0xffE65A29,
           "types": ["fire"],
           "strengths": ["bug", "steel", "grass", "ice"],
           "weaknesses": ["ground", "rock", "water"],
@@ -1809,7 +1809,7 @@ class Pokemons {
           "involution": 77
         },
         {
-          "colorHex": "#DE627B",
+          "colorHex": 0xffDE627B,
           "types": ["water", "psychic"],
           "strengths": ["fighting", "poison", "ground", "rock", "fire"],
           "weaknesses": ["bug", "dark", "electric", "ghost", "grass"],
@@ -1833,7 +1833,7 @@ class Pokemons {
           "involution": 79
         },
         {
-          "colorHex": "#DE627B",
+          "colorHex": 0xffDE627B,
           "types": ["water", "psychic"],
           "strengths": ["fighting", "poison", "ground", "rock", "fire"],
           "weaknesses": ["bug", "dark", "electric", "ghost", "grass"],
@@ -1855,7 +1855,7 @@ class Pokemons {
           "involution": 79
         },
         {
-          "colorHex": "#B4D5BD",
+          "colorHex": 0xffB4D5BD,
           "types": ["electric", "steel"],
           "strengths": ["ice", "fairy", "flying", "rock"],
           "weaknesses": ["ground", "fire", "fighting"],
@@ -1879,7 +1879,7 @@ class Pokemons {
           "involution": 81
         },
         {
-          "colorHex": "#B4D5BD",
+          "colorHex": 0xffB4D5BD,
           "types": ["electric", "steel"],
           "strengths": ["ice", "fairy", "flying", "rock"],
           "weaknesses": ["ground", "fire", "fighting"],
@@ -1901,7 +1901,7 @@ class Pokemons {
           "involution": 81
         },
         {
-          "colorHex": "#9CAC52",
+          "colorHex": 0xff9CAC52,
           "types": ["normal", "flying"],
           "strengths": ["fighting", "bug", "grass"],
           "weaknesses": ["electric", "ice", "rock"],
@@ -1923,7 +1923,7 @@ class Pokemons {
           "involution": 83
         },
         {
-          "colorHex": "#8B836A",
+          "colorHex": 0xff8B836A,
           "types": ["normal", "flying"],
           "strengths": ["fighting", "bug", "grass"],
           "weaknesses": ["electric", "ice", "rock"],
@@ -1947,7 +1947,7 @@ class Pokemons {
           "involution": 84
         },
         {
-          "colorHex": "#A46A62",
+          "colorHex": 0xffA46A62,
           "types": ["normal", "flying"],
           "strengths": ["fighting", "bug", "grass"],
           "weaknesses": ["electric", "ice", "rock"],
@@ -1969,7 +1969,7 @@ class Pokemons {
           "involution": 84
         },
         {
-          "colorHex": "#7B7B7B",
+          "colorHex": 0xff7B7B7B,
           "types": ["water"],
           "strengths": ["rock", "ground", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -1993,7 +1993,7 @@ class Pokemons {
           "involution": 86
         },
         {
-          "colorHex": "#737B83",
+          "colorHex": 0xff737B83,
           "types": ["water", "ice"],
           "strengths": ["rock", "ground", "flying"],
           "weaknesses": ["electric", "fighting", "grass", "rock"],
@@ -2015,7 +2015,7 @@ class Pokemons {
           "involution": 86
         },
         {
-          "colorHex": "#7B6283",
+          "colorHex": 0xff7B6283,
           "types": ["poison"],
           "strengths": ["grass", "fairy"],
           "weaknesses": ["ground", "psychic"],
@@ -2039,7 +2039,7 @@ class Pokemons {
           "involution": 88
         },
         {
-          "colorHex": "#6A5A73",
+          "colorHex": 0xff6A5A73,
           "types": ["poison"],
           "strengths": ["grass", "fairy"],
           "weaknesses": ["ground", "psychic"],
@@ -2061,7 +2061,7 @@ class Pokemons {
           "involution": 88
         },
         {
-          "colorHex": "#6A629C",
+          "colorHex": 0xff6A629C,
           "types": ["water"],
           "strengths": ["rock", "ground", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -2085,7 +2085,7 @@ class Pokemons {
           "involution": 90
         },
         {
-          "colorHex": "#7B738B",
+          "colorHex": 0xff7B738B,
           "types": ["water", "ice"],
           "strengths": ["rock", "ground", "flying"],
           "weaknesses": ["electric", "fighting", "grass", "rock"],
@@ -2107,7 +2107,7 @@ class Pokemons {
           "involution": 90
         },
         {
-          "colorHex": "#8B6A94",
+          "colorHex": 0xff8B6A94,
           "types": ["ghost", "poison"],
           "strengths": ["grass", "psychic", "fairy"],
           "weaknesses": ["dark", "ghost", "psychic"],
@@ -2131,7 +2131,7 @@ class Pokemons {
           "involution": 92
         },
         {
-          "colorHex": "#736283",
+          "colorHex": 0xff736283,
           "types": ["ghost", "poison"],
           "strengths": ["grass", "psychic", "fairy"],
           "weaknesses": ["dark", "ghost", "psychic"],
@@ -2155,7 +2155,7 @@ class Pokemons {
           "involution": 92
         },
         {
-          "colorHex": "#6A628B",
+          "colorHex": 0xff6A628B,
           "types": ["ghost", "poison"],
           "strengths": ["grass", "psychic", "fairy"],
           "weaknesses": ["dark", "ghost", "psychic"],
@@ -2177,7 +2177,7 @@ class Pokemons {
           "involution": 92
         },
         {
-          "colorHex": "#524A5A",
+          "colorHex": 0xff524A5A,
           "types": ["ground", "rock"],
           "strengths": ["poison", "rock", "fire", "electric", "ice"],
           "weaknesses": ["grass", "water", "fighting", "ground", "ice", "steel"],
@@ -2199,7 +2199,7 @@ class Pokemons {
           "involution": 95
         },
         {
-          "colorHex": "#948B73",
+          "colorHex": 0xff948B73,
           "types": ["psychic"],
           "strengths": ["fighting", "poison"],
           "weaknesses": ["bug", "dark", "ghost"],
@@ -2223,7 +2223,7 @@ class Pokemons {
           "involution": 96
         },
         {
-          "colorHex": "#BDAC5A",
+          "colorHex": 0xffBDAC5A,
           "types": ["psychic"],
           "strengths": ["fighting", "poison"],
           "weaknesses": ["bug", "dark", "ghost"],
@@ -2245,7 +2245,7 @@ class Pokemons {
           "involution": 96
         },
         {
-          "colorHex": "#9C8B8B",
+          "colorHex": 0xff9C8B8B,
           "types": ["water"],
           "strengths": ["ground", "rock", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -2269,7 +2269,7 @@ class Pokemons {
           "involution": 98
         },
         {
-          "colorHex": "#736A6A",
+          "colorHex": 0xff736A6A,
           "types": ["water"],
           "strengths": ["ground", "rock", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -2291,7 +2291,7 @@ class Pokemons {
           "involution": 98
         },
         {
-          "colorHex": "#FF5220",
+          "colorHex": 0xffFF5220,
           "types": ["electric"],
           "strengths": ["flying", "water"],
           "weaknesses": ["ground"],
@@ -2315,7 +2315,7 @@ class Pokemons {
           "involution": 100
         },
         {
-          "colorHex": "#FF5220",
+          "colorHex": 0xffFF5220,
           "types": ["electric"],
           "strengths": ["flying", "water"],
           "weaknesses": ["ground"],
@@ -2337,7 +2337,7 @@ class Pokemons {
           "involution": 100
         },
         {
-          "colorHex": "#EE8362",
+          "colorHex": 0xffEE8362,
           "types": ["grass", "psychic"],
           "strengths": ["fighting", "ground", "rock", "water"],
           "weaknesses": ["bug", "dark", "fire", "flying", "ghost", "ice", "poison"],
@@ -2361,7 +2361,7 @@ class Pokemons {
           "involution": 102
         },
         {
-          "colorHex": "#5A9C5A",
+          "colorHex": 0xff5A9C5A,
           "types": ["grass", "psychic"],
           "strengths": ["fighting", "ground", "rock", "water"],
           "weaknesses": ["bug", "dark", "fire", "flying", "ghost", "ice", "poison"],
@@ -2383,7 +2383,7 @@ class Pokemons {
           "involution": 102
         },
         {
-          "colorHex": "#A48B5A",
+          "colorHex": 0xffA48B5A,
           "types": ["ground"],
           "strengths": ["poison", "rock", "steel", "fire", "electric"],
           "weaknesses": ["grass", "ice", "water"],
@@ -2407,7 +2407,7 @@ class Pokemons {
           "involution": 104
         },
         {
-          "colorHex": "#B4ACAC",
+          "colorHex": 0xffB4ACAC,
           "types": ["ground"],
           "strengths": ["poison", "rock", "steel", "fire", "electric"],
           "weaknesses": ["grass", "ice", "water"],
@@ -2429,7 +2429,7 @@ class Pokemons {
           "involution": 104
         },
         {
-          "colorHex": "#8B7B7B",
+          "colorHex": 0xff8B7B7B,
           "types": ["fighting"],
           "strengths": ["normal", "rock", "steel", "ice", "dark"],
           "weaknesses": ["flying", "psychic", "fairy"],
@@ -2451,7 +2451,7 @@ class Pokemons {
           "involution": 106
         },
         {
-          "colorHex": "#9494A4",
+          "colorHex": 0xff9494A4,
           "types": ["fighting"],
           "strengths": ["normal", "rock", "steel", "ice", "dark"],
           "weaknesses": ["flying", "psychic", "fairy"],
@@ -2473,7 +2473,7 @@ class Pokemons {
           "involution": 107
         },
         {
-          "colorHex": "#B4838B",
+          "colorHex": 0xffB4838B,
           "types": ["normal"],
           "strengths": [],
           "weaknesses": ["fighting"],
@@ -2495,7 +2495,7 @@ class Pokemons {
           "involution": 108
         },
         {
-          "colorHex": "#BD7BB4",
+          "colorHex": 0xffBD7BB4,
           "types": ["poison"],
           "strengths": ["grass", "fairy"],
           "weaknesses": ["psychic"],
@@ -2519,7 +2519,7 @@ class Pokemons {
           "involution": 109
         },
         {
-          "colorHex": "#BD7BB4",
+          "colorHex": 0xffBD7BB4,
           "types": ["poison"],
           "strengths": ["grass", "fairy"],
           "weaknesses": ["psychic"],
@@ -2541,7 +2541,7 @@ class Pokemons {
           "involution": 109
         },
         {
-          "colorHex": "#838B94",
+          "colorHex": 0xff838B94,
           "types": ["rock", "ground"],
           "strengths": ["poison", "rock", "fire", "electric", "ice"],
           "weaknesses": ["grass", "water", "fighting", "ground", "ice", "steel"],
@@ -2565,7 +2565,7 @@ class Pokemons {
           "involution": 111
         },
         {
-          "colorHex": "#7B7B8B",
+          "colorHex": 0xff7B7B8B,
           "types": ["rock", "ground"],
           "strengths": ["poison", "rock", "fire", "electric", "ice"],
           "weaknesses": ["grass", "water", "fighting", "ground", "ice", "steel"],
@@ -2587,7 +2587,7 @@ class Pokemons {
           "involution": 111
         },
         {
-          "colorHex": "#FFACAC",
+          "colorHex": 0xffFFACAC,
           "types": ["rock", "ground"],
           "strengths": ["poison", "rock", "fire", "electric", "ice"],
           "weaknesses": ["fighting"],
@@ -2609,7 +2609,7 @@ class Pokemons {
           "involution": 113
         },
         {
-          "colorHex": "#4A6A83",
+          "colorHex": 0xff4A6A83,
           "types": ["grass"],
           "strengths": ["rock", "ground", "water"],
           "weaknesses": ["bug", "fire", "flying", "ice", "poison"],
@@ -2631,7 +2631,7 @@ class Pokemons {
           "involution": 114
         },
         {
-          "colorHex": "#735A62",
+          "colorHex": 0xff735A62,
           "types": ["normal"],
           "strengths": [],
           "weaknesses": ["fighting"],
@@ -2653,7 +2653,7 @@ class Pokemons {
           "involution": 115
         },
         {
-          "colorHex": "#528BAC",
+          "colorHex": 0xff528BAC,
           "types": ["water"],
           "strengths": ["rock", "ground", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -2677,7 +2677,7 @@ class Pokemons {
           "involution": 116
         },
         {
-          "colorHex": "#52839C",
+          "colorHex": 0xff52839C,
           "types": ["water"],
           "strengths": ["rock", "ground", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -2699,7 +2699,7 @@ class Pokemons {
           "involution": 116
         },
         {
-          "colorHex": "#ACA4B4",
+          "colorHex": 0xffACA4B4,
           "types": ["water"],
           "strengths": ["rock", "ground", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -2723,7 +2723,7 @@ class Pokemons {
           "involution": 118
         },
         {
-          "colorHex": "#8B8B94",
+          "colorHex": 0xff8B8B94,
           "types": ["water"],
           "strengths": ["rock", "ground", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -2745,7 +2745,7 @@ class Pokemons {
           "involution": 118
         },
         {
-          "colorHex": "#9C8B4A",
+          "colorHex": 0xff9C8B4A,
           "types": ["water"],
           "strengths": ["rock", "ground", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -2769,7 +2769,7 @@ class Pokemons {
           "involution": 120
         },
         {
-          "colorHex": "#736A83",
+          "colorHex": 0xff736A83,
           "types": ["water", "psychic"],
           "strengths": ["fighting", "poison", "ground", "rock", "fire"],
           "weaknesses": ["bug", "dark", "electric", "ghost", "grass"],
@@ -2791,7 +2791,7 @@ class Pokemons {
           "involution": 120
         },
         {
-          "colorHex": "#527394",
+          "colorHex": 0xff527394,
           "types": ["fairy", "psychic"],
           "strengths": ["fighting", "dragon"],
           "weaknesses": ["ghost", "steel", "poison"],
@@ -2813,7 +2813,7 @@ class Pokemons {
           "involution": 122
         },
         {
-          "colorHex": "#739C62",
+          "colorHex": 0xff739C62,
           "types": ["bug", "flying"],
           "strengths": ["bug", "grass", "psychic", "dark"],
           "weaknesses": ["rock", "electric", "fire", "flying", "ice"],
@@ -2835,7 +2835,7 @@ class Pokemons {
           "involution": 123
         },
         {
-          "colorHex": "#9473A4",
+          "colorHex": 0xff9473A4,
           "types": ["ice", "psychic"],
           "strengths": ["fighting", "flying", "poison", "ground"],
           "weaknesses": ["bug", "dark", "fire", "ghost", "rock", "steel"],
@@ -2857,7 +2857,7 @@ class Pokemons {
           "involution": 124
         },
         {
-          "colorHex": "#9C8352",
+          "colorHex": 0xff9C8352,
           "types": ["electric"],
           "strengths": ["flying", "water"],
           "weaknesses": ["ground"],
@@ -2879,7 +2879,7 @@ class Pokemons {
           "involution": 125
         },
         {
-          "colorHex": "#CD1041",
+          "colorHex": 0xffCD1041,
           "types": ["fire"],
           "strengths": ["bug", "steel", "grass", "ice"],
           "weaknesses": ["ground", "rock", "water"],
@@ -2901,7 +2901,7 @@ class Pokemons {
           "involution": 126
         },
         {
-          "colorHex": "#5A4A4A",
+          "colorHex": 0xff5A4A4A,
           "types": ["bug"],
           "strengths": ["grass", "psychic", "dark"],
           "weaknesses": ["fire", "flying", "rock"],
@@ -2923,7 +2923,7 @@ class Pokemons {
           "involution": 127
         },
         {
-          "colorHex": "#5A5A83",
+          "colorHex": 0xff5A5A83,
           "types": ["normal"],
           "strengths": [],
           "weaknesses": ["fighting"],
@@ -2945,7 +2945,7 @@ class Pokemons {
           "involution": 128
         },
         {
-          "colorHex": "#948B8B",
+          "colorHex": 0xff948B8B,
           "types": ["water"],
           "strengths": ["fire", "rock", "ground"],
           "weaknesses": ["electric", "grass"],
@@ -2969,7 +2969,7 @@ class Pokemons {
           "involution": 129
         },
         {
-          "colorHex": "#5A839C",
+          "colorHex": 0xff5A839C,
           "types": ["water", "flying"],
           "strengths": ["fighting", "ground", "bug", "fire"],
           "weaknesses": ["electric", "rock"],
@@ -2991,7 +2991,7 @@ class Pokemons {
           "involution": 129
         },
         {
-          "colorHex": "#838383",
+          "colorHex": 0xff838383,
           "types": ["water", "ice"],
           "strengths": ["flying", "ground", "rock"],
           "weaknesses": ["electric", "fighting", "grass", "rock"],
@@ -3013,7 +3013,7 @@ class Pokemons {
           "involution": 131
         },
         {
-          "colorHex": "#837394",
+          "colorHex": 0xff837394,
           "types": ["normal"],
           "strengths": [],
           "weaknesses": ["fighting"],
@@ -3035,7 +3035,7 @@ class Pokemons {
           "involution": 132
         },
         {
-          "colorHex": "#A48B5A",
+          "colorHex": 0xffA48B5A,
           "types": ["normal"],
           "strengths": [],
           "weaknesses": ["fighting"],
@@ -3061,7 +3061,7 @@ class Pokemons {
           "involution": 133
         },
         {
-          "colorHex": "#62A4B4",
+          "colorHex": 0xff62A4B4,
           "types": ["water"],
           "strengths": ["ground", "rock", "fire"],
           "weaknesses": ["electric", "grass"],
@@ -3083,7 +3083,7 @@ class Pokemons {
           "involution": 133
         },
         {
-          "colorHex": "#AC9452",
+          "colorHex": 0xffAC9452,
           "types": ["electric"],
           "strengths": ["flying", "water"],
           "weaknesses": ["ground"],
@@ -3105,7 +3105,7 @@ class Pokemons {
           "involution": 133
         },
         {
-          "colorHex": "#AC9C62",
+          "colorHex": 0xffAC9C62,
           "types": ["fire"],
           "strengths": ["bug", "steel", "grass", "ice"],
           "weaknesses": ["ground", "rock", "water"],
@@ -3127,7 +3127,7 @@ class Pokemons {
           "involution": 133
         },
         {
-          "colorHex": "#4A8B9C",
+          "colorHex": 0xff4A8B9C,
           "types": ["normal"],
           "strengths": [],
           "weaknesses": ["fighting"],
@@ -3149,7 +3149,7 @@ class Pokemons {
           "involution": 137
         },
         {
-          "colorHex": "#9C946A",
+          "colorHex": 0xff9C946A,
           "types": ["rock", "water"],
           "strengths": ["flying", "rock", "bug", "fire", "ice"],
           "weaknesses": ["grass", "electric", "fighting", "ground"],
@@ -3173,7 +3173,7 @@ class Pokemons {
           "involution": 138
         },
         {
-          "colorHex": "#4A8394",
+          "colorHex": 0xff4A8394,
           "types": ["rock", "water"],
           "strengths": ["flying", "rock", "bug", "fire", "ice"],
           "weaknesses": ["grass", "electric", "fighting", "ground"],
@@ -3195,7 +3195,7 @@ class Pokemons {
           "involution": 138
         },
         {
-          "colorHex": "#836A41",
+          "colorHex": 0xff836A41,
           "types": ["rock", "water"],
           "strengths": ["flying", "rock", "bug", "fire", "ice"],
           "weaknesses": ["grass", "electric", "fighting", "ground"],
@@ -3219,7 +3219,7 @@ class Pokemons {
           "involution": 140
         },
         {
-          "colorHex": "#9C8B6A",
+          "colorHex": 0xff9C8B6A,
           "types": ["rock", "water"],
           "strengths": ["flying", "rock", "bug", "fire", "ice"],
           "weaknesses": ["grass", "electric", "fighting", "ground"],
@@ -3241,7 +3241,7 @@ class Pokemons {
           "involution": 140
         },
         {
-          "colorHex": "#7B6A7B",
+          "colorHex": 0xff7B6A7B,
           "types": ["rock", "flying"],
           "strengths": ["flying", "grass", "bug", "fire", "ice"],
           "weaknesses": ["electric", "ice", "rock", "steel", "water"],
@@ -3263,7 +3263,7 @@ class Pokemons {
           "involution": 142
         },
         {
-          "colorHex": "#4A7B8B",
+          "colorHex": 0xff4A7B8B,
           "types": ["normal"],
           "strengths": [],
           "weaknesses": ["fighting"],
@@ -3285,7 +3285,7 @@ class Pokemons {
           "involution": 143
         },
         {
-          "colorHex": "#395A7B",
+          "colorHex": 0xff395A7B,
           "types": ["ice", "flying"],
           "strengths": ["fighting", "flying", "ground", "bug", "grass", "dragon"],
           "weaknesses": ["rock", "electric", "fire", "steel"],
@@ -3307,7 +3307,7 @@ class Pokemons {
           "involution": 144
         },
         {
-          "colorHex": "#B49C52",
+          "colorHex": 0xffB49C52,
           "types": ["electric", "flying"],
           "strengths": ["flying", "fighting", "bug", "water"],
           "weaknesses": ["ice", "rock"],
@@ -3329,7 +3329,7 @@ class Pokemons {
           "involution": 145
         },
         {
-          "colorHex": "#8B5A52",
+          "colorHex": 0xff8B5A52,
           "types": ["fire", "flying"],
           "strengths": ["fighting", "grass", "bug", "ice"],
           "weaknesses": ["rock", "electric", "water"],
@@ -3351,7 +3351,7 @@ class Pokemons {
           "involution": 146
         },
         {
-          "colorHex": "#626AA4",
+          "colorHex": 0xff626AA4,
           "types": ["dragon"],
           "strengths": ["dragon"],
           "weaknesses": ["dragon", "ice", "fairy"],
@@ -3375,7 +3375,7 @@ class Pokemons {
           "involution": 147
         },
         {
-          "colorHex": "#5A7394",
+          "colorHex": 0xff5A7394,
           "types": ["dragon"],
           "strengths": ["dragon"],
           "weaknesses": ["dragon", "ice", "fairy"],
@@ -3399,7 +3399,7 @@ class Pokemons {
           "involution": 147
         },
         {
-          "colorHex": "#DE7339",
+          "colorHex": 0xffDE7339,
           "types": ["dragon", "flying"],
           "strengths": ["dragon", "fighting", "bug", "grass"],
           "weaknesses": ["ice", "dragon", "rock", "fairy"],
@@ -3421,7 +3421,7 @@ class Pokemons {
           "involution": 147
         },
         {
-          "colorHex": "#6A319C",
+          "colorHex": 0xff6A319C,
           "types": ["psychic"],
           "strengths": ["fighting", "poison"],
           "weaknesses": ["bug", "dark", "ghost"],
@@ -3443,7 +3443,7 @@ class Pokemons {
           "involution": 150
         },
         {
-          "colorHex": "#FFB4D5",
+          "colorHex": 0xffFFB4D5,
           "types": ["psychic"],
           "strengths": ["fighting", "poison"],
           "weaknesses": ["bug", "dark", "ghost"],

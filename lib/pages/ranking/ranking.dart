@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/layout/tabbed.dart';
-import 'package:pokedex/pages/ranking/pokemons.dart';
+import 'package:pokedex/layouts/tabbed.dart';
+import 'package:pokedex/pages/ranking/pokemons-tab.dart';
 
 class Ranking extends StatelessWidget {
   @override
@@ -14,10 +14,10 @@ class Ranking extends StatelessWidget {
         'HP',
       ],
       children: <Widget>[
-        Pokemons(
+        PokemonsTab(
           sortByHP: false,
         ),
-        Pokemons(
+        PokemonsTab(
           sortByHP: true,
         ),
       ],

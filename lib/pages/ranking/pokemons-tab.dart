@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/db/eggs.dart';
+import 'package:pokedex/db/pokemons.dart' as db;
 import 'package:pokedex/widgets/number.dart';
 
-class Pokemons extends StatelessWidget {
-  Pokemons({
+class PokemonsTab extends StatelessWidget {
+  PokemonsTab({
     Key key,
-    @required int distance,
+    @required bool sortByHP,
   }) : super(key: key) {
-    pokemons = Eggs.eggs();
-    if (distance == 0) {
-      return;
-    }
-    // use var distance as a filter
-    pokemons.retainWhere((Map<String, dynamic> pokemon) {
-      return pokemon['eggDistance'] == distance;
+    param = (sortByHP) ? 'maxHP' : 'maxCP';
+    smallParam = (sortByHP) ? 'HP' : 'CP';
+
+    /// sort Pokemons by param
+    pokemons.sort((Map<String, dynamic> a, Map<String, dynamic> b) {
+      return a[param] >= b[param] ? -1 : 1;
     });
   }
 
-  List<Map<String, dynamic>> pokemons;
+  List<Map<String, dynamic>> pokemons = db.Pokemons.pokemons();
+  String param, smallParam;
 
   @override
   Widget build(BuildContext context) {
@@ -58,22 +58,26 @@ class Pokemons extends StatelessWidget {
             ),
           ),
 
-          /// Egg icon
+          /// Ranking
           Container(
             padding: const EdgeInsets.all(16.0),
-            child: Column(
-              children: <Widget>[
-                Container(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('assets/img/egg.png'),
-                ),
-                Text(
-                  '${pokemon['eggDistance']} km',
-                  style: Theme.of(context).textTheme.caption,
-                ),
-              ],
+            child: RichText(
+              textAlign: TextAlign.center,
+              text: TextSpan(
+                style: Theme.of(context).textTheme.caption,
+                children: <TextSpan>[
+                  TextSpan(text: '#'),
+                  TextSpan(
+                    text: '${index + 1}\n',
+                    style: Theme.of(context).textTheme.display2,
+                  ),
+                  TextSpan(text: '${pokemon[param]} $smallParam'),
+                ],
+              ),
             ),
           ),
+
+          /// end wid
         ],
       ),
 
