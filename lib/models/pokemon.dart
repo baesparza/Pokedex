@@ -48,7 +48,7 @@ class Evolution {
   final int number;
   final int candies;
 
-  Evolution({
+  const Evolution({
     @required this.number,
     @required this.candies,
   });

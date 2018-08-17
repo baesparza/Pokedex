@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:pokedex/layouts/tabbed.dart';
-import 'package:pokedex/pages/eggs/pokemons-tab.dart';
+import 'package:pokedex/pages/egg-distance/pokemons-tab.dart';
 
-class Eggs extends StatelessWidget {
+class EggDistance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Tabbed(

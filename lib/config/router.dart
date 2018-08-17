@@ -3,7 +3,7 @@ import 'package:pokedex/models/pokemon.dart';
 
 import 'package:pokedex/pages/home.dart';
 import 'package:pokedex/pages/pokemon/pokemon-details.dart';
-import 'package:pokedex/pages/eggs/eggs.dart';
+import 'package:pokedex/pages/egg-distance/egg-distance.dart';
 import 'package:pokedex/db/json-pokemons.dart';
 import 'package:pokedex/pages/ranking/ranking.dart';
 
@@ -11,7 +11,7 @@ class Router {
   static Map<String, WidgetBuilder> appRoutes() {
     return {
       '/': (BuildContext context) => Home(),
-      '/eggs': (BuildContext context) => Eggs(),
+      '/eggs': (BuildContext context) => EggDistance(),
       '/ranking': (BuildContext context) => Ranking(),
     };
   }

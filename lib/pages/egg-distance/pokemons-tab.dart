@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:pokedex/db/json-eggs.dart';
+import 'package:pokedex/models/egg.dart';
 import 'package:pokedex/widgets/number.dart';
 
 class PokemonsTab extends StatelessWidget {
@@ -8,31 +9,31 @@ class PokemonsTab extends StatelessWidget {
     Key key,
     @required int distance,
   }) : super(key: key) {
-    pokemons = JSONEggs.eggs();
+    eggs = JSONEggs.eggs();
     if (distance == 0) {
       return;
     }
     // use var distance as a filter
-    pokemons.retainWhere((Map<String, dynamic> pokemon) {
-      return pokemon['eggDistance'] == distance;
+    eggs.retainWhere((Egg egg) {
+      return egg.eggDistance == distance;
     });
   }
 
-  List<Map<String, dynamic>> pokemons;
+  List<Egg> eggs;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: ListView.builder(
         itemBuilder: _buidlPokemon,
-        itemCount: pokemons.length,
+        itemCount: eggs.length,
         primary: false,
       ),
     );
   }
 
   Widget _buidlPokemon(BuildContext context, int index) {
-    Map<String, dynamic> pokemon = pokemons[index];
+    Egg egg = eggs[index];
     return MaterialButton(
       padding: EdgeInsets.symmetric(horizontal: 20.0),
       child: Row(
@@ -41,7 +42,7 @@ class PokemonsTab extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 10.0),
             child: Image.network(
-                'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F${pokemon['number']}.png?alt=media'),
+                'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F${egg.number}.png?alt=media'),
           ),
 
           /// Description
@@ -49,9 +50,9 @@ class PokemonsTab extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Number(pokemon['number']),
+                Number(egg.number),
                 Text(
-                  pokemon['name'],
+                  egg.name,
                   style: Theme.of(context).textTheme.display2,
                 ),
               ],
@@ -68,7 +69,7 @@ class PokemonsTab extends StatelessWidget {
                   child: Image.asset('assets/img/egg.png'),
                 ),
                 Text(
-                  '${pokemon['eggDistance']} km',
+                  '${egg.eggDistance} km',
                   style: Theme.of(context).textTheme.caption,
                 ),
               ],
@@ -79,7 +80,7 @@ class PokemonsTab extends StatelessWidget {
 
       /// Navigate to specific pokemon
       onPressed: () {
-        Navigator.pushNamed(context, '/pokemon/${pokemon['number'] - 1}');
+        Navigator.pushNamed(context, '/pokemon/${egg.number - 1}');
       },
     );
   }
