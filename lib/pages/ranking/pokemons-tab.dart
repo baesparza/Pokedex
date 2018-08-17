@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:pokedex/db/json-pokemons.dart';
+import 'package:pokedex/models/pokemon.dart';
 import 'package:pokedex/widgets/number.dart';
 
 class PokemonsTab extends StatelessWidget {
@@ -8,16 +9,16 @@ class PokemonsTab extends StatelessWidget {
     Key key,
     @required bool sortByHP,
   }) : super(key: key) {
-    param = (sortByHP) ? 'maxHP' : 'maxCP';
-    smallParam = (sortByHP) ? 'HP' : 'CP';
+    param = (sortByHP) ? 'HP' : 'CP';
 
     /// sort Pokemons by param
-    pokemons.sort((Map<String, dynamic> a, Map<String, dynamic> b) {
-      return a[param] >= b[param] ? -1 : 1;
+    pokemons.sort((Pokemon a, Pokemon b) {
+      if (sortByHP) return a.maxHP >= b.maxHP ? -1 : 1;
+      return a.maxCP >= b.maxCP ? -1 : 1;
     });
   }
 
-  List<Map<String, dynamic>> pokemons = JSONPokemons.pokemons();
+  List<Pokemon> pokemons = JSONPokemons.pokemons();
   String param, smallParam;
 
   @override
@@ -32,7 +33,7 @@ class PokemonsTab extends StatelessWidget {
   }
 
   Widget _buidlPokemon(BuildContext context, int index) {
-    Map<String, dynamic> pokemon = pokemons[index];
+    Pokemon pokemon = pokemons[index];
     return MaterialButton(
       padding: EdgeInsets.symmetric(horizontal: 20.0),
       child: Row(
@@ -41,7 +42,7 @@ class PokemonsTab extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 10.0),
             child: Image.network(
-                'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F${pokemon['number']}.png?alt=media'),
+                'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F${pokemon.number}.png?alt=media'),
           ),
 
           /// Description
@@ -49,9 +50,9 @@ class PokemonsTab extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Number(pokemon['number']),
+                Number(pokemon.number),
                 Text(
-                  pokemon['name'],
+                  pokemon.name,
                   style: Theme.of(context).textTheme.display2,
                 ),
               ],
@@ -71,7 +72,7 @@ class PokemonsTab extends StatelessWidget {
                     text: '${index + 1}\n',
                     style: Theme.of(context).textTheme.display2,
                   ),
-                  TextSpan(text: '${pokemon[param]} $smallParam'),
+                  TextSpan(text: '${(param == 'HP') ? pokemon.maxHP: pokemon.maxCP} $param'),
                 ],
               ),
             ),
@@ -83,7 +84,7 @@ class PokemonsTab extends StatelessWidget {
 
       /// Navigate to specific pokemon
       onPressed: () {
-        Navigator.pushNamed(context, '/pokemon/${pokemon['number'] - 1}');
+        Navigator.pushNamed(context, '/pokemon/${pokemon.number - 1}');
       },
     );
   }

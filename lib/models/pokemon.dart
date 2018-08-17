@@ -24,8 +24,8 @@ class Pokemon {
   const Pokemon({
     @required this.colorHex,
     @required this.types,
-    @required this.strengths,
-    @required this.weaknesses,
+    this.strengths,
+    this.weaknesses,
     @required this.name,
     @required this.number,
     @required this.description,
@@ -34,12 +34,12 @@ class Pokemon {
     @required this.attack,
     @required this.defense,
     @required this.stamina,
-    @required this.egg,
+    this.egg,
     @required this.rarity,
     @required this.spawnRate,
     @required this.rankingHP,
     @required this.rankingCP,
-    @required this.evolution,
+    this.evolution,
     @required this.involution,
   });
 }
@@ -51,13 +51,5 @@ class Evolution {
   Evolution({
     @required this.number,
     @required this.candies,
-  });
-}
-
-class Pokemons {
-  final List<Pokemon> pokemons;
-
-  Pokemons({
-    @required this.pokemons,
   });
 }

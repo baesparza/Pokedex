@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:pokedex/layouts/default.dart';
 import 'package:pokedex/db/json-pokemons.dart';
+import 'package:pokedex/models/pokemon.dart';
 
 class Home extends StatelessWidget {
-  final List<Map<String, dynamic>> pokemons = JSONPokemons.pokemons();
+  final List<Pokemon> pokemons = JSONPokemons.pokemons();
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class Home extends StatelessWidget {
   }
 
   Widget _buildGridPokemons(BuildContext context, int index) {
-    Map<String, dynamic> pokemon = pokemons[index];
+    Pokemon pokemon = pokemons[index];
 
     /// widget
     return MaterialButton(
@@ -42,12 +43,12 @@ class Home extends StatelessWidget {
           /// Image
           Expanded(
             child: Image.network(
-                'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F${pokemon['number']}.png?alt=media'),
+                'https://firebasestorage.googleapis.com/v0/b/pokemon-dex-go.appspot.com/o/sprites%2F${pokemon.number}.png?alt=media'),
           ),
 
           /// Pokemon name
           Text(
-            pokemons[index]['name'],
+            pokemon.name,
             style: Theme.of(context).textTheme.subhead,
           ),
         ],
