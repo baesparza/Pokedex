@@ -25,8 +25,8 @@ class PokeTypes extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Constants.getTypeColor(type),
                 ),
-                padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 13.0),
-                margin: EdgeInsets.only(right: 10.0),
+                padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 6.0),
+                margin: EdgeInsets.only(right: 5.0),
                 child: Text(
                   type.toUpperCase(),
                   style: Theme.of(context).primaryTextTheme.headline,
@@ -36,4 +36,3 @@ class PokeTypes extends StatelessWidget {
     );
   }
 }
-

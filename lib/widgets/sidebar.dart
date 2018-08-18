@@ -25,12 +25,6 @@ class Sidebar extends StatelessWidget {
             ),
             backgroundColor: (color == null) ? Theme.of(context).primaryColor : color,
             automaticallyImplyLeading: false,
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(Icons.close),
-                onPressed: () => Navigator.pop(context),
-              ),
-            ],
           ),
 
           /// list items
@@ -38,6 +32,16 @@ class Sidebar extends StatelessWidget {
             child: ListView(
               padding: EdgeInsets.all(0.0),
               children: <Widget>[
+                // home
+                _buildListItem(
+                  context,
+                  title: 'Home',
+                  icon: Icons.home,
+                  onTap: () {
+                    Navigator.pushNamed(context, '/');
+                  },
+                ),
+
                 // Ranking
                 (ranking)
                     ? _buildListItem(
@@ -61,6 +65,16 @@ class Sidebar extends StatelessWidget {
                         },
                       )
                     : Container(),
+
+                // about
+                _buildListItem(
+                  context,
+                  title: 'About',
+                  icon: Icons.info,
+                  onTap: () {
+                    Navigator.pushNamed(context, '/');
+                  },
+                ),
               ],
             ),
           ),
@@ -73,7 +87,8 @@ class Sidebar extends StatelessWidget {
   Widget _buildListItem(
     BuildContext context, {
     @required String title,
-    @required String path,
+    String path,
+    IconData icon,
     @required Function onTap,
   }) {
     return ListTile(
@@ -81,7 +96,14 @@ class Sidebar extends StatelessWidget {
         title,
         style: Theme.of(context).textTheme.headline,
       ),
-      leading: Image.asset(path),
+      leading: (path == null)
+          ? Icon(
+              icon,
+              color: Theme.of(context).iconTheme.color,
+            )
+          : Image.asset(
+              path,
+            ),
       onTap: onTap,
     );
   }

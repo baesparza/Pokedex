@@ -43,9 +43,9 @@ class Application {
 
         // Pokemon type
         headline: TextStyle(
-          fontSize: 16.0,
+          fontSize: 12.0,
           color: Constants.colorWhite,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w500,
         ),
       ),
 
@@ -56,7 +56,7 @@ class Application {
           color: Constants.colorBlue,
         ),
 
-        // Pokemon number
+        // Pokemon number - pokemon stats
         caption: TextStyle(
           fontSize: 16.0,
           color: Constants.colorBlue.withAlpha(Constants.alpha),
@@ -64,7 +64,7 @@ class Application {
 
         // style for paragraphs
         body1: TextStyle(
-          fontSize: 17.0,
+          fontSize: 16.0,
           color: Constants.colorBlue,
         ),
 
@@ -72,7 +72,7 @@ class Application {
         subhead: TextStyle(
           color: Constants.colorBlue,
           fontWeight: FontWeight.bold,
-          fontSize: 17.0,
+          fontSize: 16.0,
         ),
 
         // section title
