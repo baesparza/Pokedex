@@ -11,26 +11,20 @@ class Sidebar extends StatelessWidget {
       child: ListView(
         children: <Widget>[
           // header
-          AppBar(
-            backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-            automaticallyImplyLeading: false,
-            iconTheme: Theme.of(context).iconTheme,
-
-            // title
-            title: Text(
-              'Menu',
-              style: Theme.of(context).textTheme.title,
+          DrawerHeader(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  'Menu',
+                  style: Theme.of(context).primaryTextTheme.title,
+                ),
+              ],
             ),
-
-            // close buttom
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(Icons.close),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ],
+            decoration: BoxDecoration(
+              color: Theme.of(context).primaryColor,
+            ),
           ),
 
           /// list items
@@ -40,6 +34,7 @@ class Sidebar extends StatelessWidget {
             title: 'Pokemon Ranking',
             path: 'assets/img/ranking.png',
             onTap: () {
+              // Navigator.pop(context);
               Navigator.pushNamed(context, '/ranking');
             },
           ),
@@ -49,6 +44,7 @@ class Sidebar extends StatelessWidget {
             title: 'Eggs Distance',
             path: 'assets/img/egg.png',
             onTap: () {
+              // Navigator.pop(context);
               Navigator.pushNamed(context, '/eggs');
             },
           ),

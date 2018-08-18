@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokedex/widgets/sidebar.dart';
 
 class Tabbed extends StatelessWidget {
   final String title;
@@ -20,6 +21,8 @@ class Tabbed extends StatelessWidget {
       length: length,
       child: Scaffold(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        // sidebar
+        endDrawer: Sidebar(),
 
         // Navbar
         appBar: AppBar(

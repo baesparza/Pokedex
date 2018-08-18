@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokedex/widgets/sidebar.dart';
 
 class Detail extends StatelessWidget {
   final Widget child;
@@ -15,6 +16,9 @@ class Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // sidebar
+      endDrawer: Sidebar(),
+
       appBar: AppBar(
         titleSpacing: 0.0,
         backgroundColor: primaryColor,

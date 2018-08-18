@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex/widgets/default/sidebar.dart';
+
+import 'package:pokedex/widgets/sidebar.dart';
 
 class Default extends StatelessWidget {
   final Widget child;
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   Default({
     Key key,
@@ -13,33 +13,31 @@ class Default extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey,
       // style scafold
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-
       // sidebar
-      drawer: Sidebar(),
-
+      endDrawer: Sidebar(),
       // Navbar
       appBar: AppBar(
         backgroundColor: Theme.of(context).backgroundColor,
+        iconTheme: Theme.of(context).iconTheme,
         titleSpacing: 0.0,
 
         // Pokeball Icon - sidebar
-        leading: MaterialButton(
-          padding: const EdgeInsets.all(8.0),
+        leading: Padding(
+          padding: const EdgeInsets.all(13.0),
           child: Image.asset('assets/img/logo.png'),
-          onPressed: () {
-            _scaffoldKey.currentState.openDrawer();
-          },
         ),
 
         // title
-        title: Text(
-          'Pokedex',
-          style: Theme.of(context).textTheme.title,
+        title: Row(
+          children: <Widget>[
+            Text(
+              'Pokedex',
+              style: Theme.of(context).textTheme.title,
+            ),
+          ],
         ),
-
         // Action buttons
         actions: <Widget>[
           _buildImageButton(
