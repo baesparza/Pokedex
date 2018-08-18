@@ -16,7 +16,7 @@ class PokemonDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Detail(
-      primaryColor: Color(res.colorHex),
+      color: Color(res.colorHex),
       title: res.name,
       child: ListView(
         padding: const EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 10.0),

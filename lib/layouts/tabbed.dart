@@ -22,7 +22,10 @@ class Tabbed extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         // sidebar
-        endDrawer: Sidebar(),
+        drawer: Sidebar(
+          ranking: !title.contains('Ranking'),
+          eggsDistance: !title.contains('Eggs'),
+        ),
 
         // Navbar
         appBar: AppBar(
@@ -32,6 +35,14 @@ class Tabbed extends StatelessWidget {
 
           // Title
           title: Text(title, style: Theme.of(context).textTheme.title),
+
+          // back btn
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.close),
+              onPressed: () => Navigator.pop(context),
+            )
+          ],
 
           // Tabs
           bottom: TabBar(

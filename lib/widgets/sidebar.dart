@@ -3,50 +3,66 @@ import 'package:flutter/material.dart';
 class Sidebar extends StatelessWidget {
   const Sidebar({
     Key key,
+    this.color,
+    this.eggsDistance = true,
+    this.ranking = true,
   }) : super(key: key);
+
+  final Color color;
+  final bool eggsDistance;
+  final bool ranking;
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: ListView(
+      child: Column(
         children: <Widget>[
           // header
-          DrawerHeader(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  'Menu',
-                  style: Theme.of(context).primaryTextTheme.title,
-                ),
-              ],
+          AppBar(
+            title: Text(
+              'Menu',
+              style: Theme.of(context).primaryTextTheme.title,
             ),
-            decoration: BoxDecoration(
-              color: Theme.of(context).primaryColor,
-            ),
+            backgroundColor: (color == null) ? Theme.of(context).primaryColor : color,
+            automaticallyImplyLeading: false,
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(Icons.close),
+                onPressed: () => Navigator.pop(context),
+              ),
+            ],
           ),
 
           /// list items
-          // Ranking
-          _buildListItem(
-            context,
-            title: 'Pokemon Ranking',
-            path: 'assets/img/ranking.png',
-            onTap: () {
-              // Navigator.pop(context);
-              Navigator.pushNamed(context, '/ranking');
-            },
-          ),
-          // Eggs
-          _buildListItem(
-            context,
-            title: 'Eggs Distance',
-            path: 'assets/img/egg.png',
-            onTap: () {
-              // Navigator.pop(context);
-              Navigator.pushNamed(context, '/eggs');
-            },
+          Expanded(
+            child: ListView(
+              padding: EdgeInsets.all(0.0),
+              children: <Widget>[
+                // Ranking
+                (ranking)
+                    ? _buildListItem(
+                        context,
+                        title: 'Pokemon Ranking',
+                        path: 'assets/img/ranking.png',
+                        onTap: () {
+                          Navigator.pushNamed(context, '/ranking');
+                        },
+                      )
+                    : Container(),
+
+                // Eggs
+                (eggsDistance)
+                    ? _buildListItem(
+                        context,
+                        title: 'Eggs Distance',
+                        path: 'assets/img/egg.png',
+                        onTap: () {
+                          Navigator.pushNamed(context, '/eggs');
+                        },
+                      )
+                    : Container(),
+              ],
+            ),
           ),
         ],
       ),

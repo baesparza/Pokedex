@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:pokedex/widgets/sidebar.dart';
-
 class Default extends StatelessWidget {
   final Widget child;
 
@@ -15,8 +13,6 @@ class Default extends StatelessWidget {
     return Scaffold(
       // style scafold
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      // sidebar
-      endDrawer: Sidebar(),
       // Navbar
       appBar: AppBar(
         backgroundColor: Theme.of(context).backgroundColor,

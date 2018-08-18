@@ -3,13 +3,13 @@ import 'package:pokedex/widgets/sidebar.dart';
 
 class Detail extends StatelessWidget {
   final Widget child;
-  final Color primaryColor;
+  final Color color;
   final String title;
 
   Detail({
     Key key,
     @required this.child,
-    this.primaryColor,
+    this.color,
     @required this.title,
   }) : super(key: key);
 
@@ -17,11 +17,14 @@ class Detail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // sidebar
-      endDrawer: Sidebar(),
+      drawer: Sidebar(
+        color: color,
+      ),
 
       appBar: AppBar(
         titleSpacing: 0.0,
-        backgroundColor: primaryColor,
+        backgroundColor: color,
+        iconTheme: Theme.of(context).primaryIconTheme,
 
         // title
         title: Text(
@@ -29,8 +32,13 @@ class Detail extends StatelessWidget {
           style: Theme.of(context).primaryTextTheme.title,
         ),
 
-        // icon
-        iconTheme: Theme.of(context).primaryIconTheme,
+        // close btn
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.close),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ],
       ),
       body: child,
     );
