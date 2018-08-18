@@ -12,6 +12,13 @@ class PokeTypes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // no types were provided or empty
+    if (types == null)
+      return Text(
+        'No types',
+        style: Theme.of(context).textTheme.body1,
+      );
+
     return Row(
       children: types
           .map((String type) => Container(
@@ -29,3 +36,4 @@ class PokeTypes extends StatelessWidget {
     );
   }
 }
+
