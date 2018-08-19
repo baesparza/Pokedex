@@ -38,7 +38,7 @@ class Sidebar extends StatelessWidget {
                   title: 'Home',
                   icon: Icons.home,
                   onTap: () {
-                    Navigator.pushNamed(context, '/');
+                    Navigator.pushReplacementNamed(context, '/');
                   },
                 ),
 
